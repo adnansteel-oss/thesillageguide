@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney x House of Sillage | Official Collaboration | The Sillage Guide</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Stylesheets & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        :root { --gold: #c5a059; --dark: #1a1a1a; --off-white: #fdfdfd; --disney-red: #da291c; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--off-white); color: var(--dark); scroll-behavior: smooth; overflow-x: hidden; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+
+        /* Navigation */
+        .nav-logo { height: 100px; width: auto; transition: transform 0.3s ease; }
+        
+        /* Search Bar */
+        .search-wrapper { position: relative; border-bottom: 1px solid #eee; padding: 2px 0; transition: 0.3s; }
+        .search-wrapper:focus-within { border-color: var(--disney-red); }
+        #productSearch { background: transparent; border: none; outline: none; font-size: 9px; text-transform: uppercase; letter-spacing: 0.2em; width: 140px; }
+
+        /* GRAND LUXURY BUTTON */
+        .btn-grand-luxury {
+            background-color: white; color: black; padding: 24px 70px; font-size: 13px;
+            letter-spacing: 0.5em; text-transform: uppercase; font-weight: 700;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: inline-block; border: 1px solid white; box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        .btn-grand-luxury:hover { background-color: var(--disney-red); color: white; border-color: var(--disney-red); transform: translateY(-5px); }
+
+        /* Product Cards */
+        .product-card { transition: all 0.4s ease; background: white; border: 1px solid #f9f9f9; display: flex; flex-direction: column; height: 100%; }
+        .product-card.hidden { display: none; }
+        
+        details summary::-webkit-details-marker { display:none; }
+        details summary { list-style: none; cursor: pointer; outline: none; border-bottom: 1px solid #f0f0f0; }
+        .desc-inner { background-color: #fcfcfc; border-left: 2px solid var(--disney-red); animation: fadeIn 0.4s ease; line-height: 1.8; font-size: 13px; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Boutique Slider Section */
+        .boutiqueSwiper { width: 100%; padding: 40px 0; }
+        .boutique-slide { text-align: center; background: #fff; padding: 30px; border: 1px solid #eee; transition: 0.3s; display: flex; flex-direction: column; height: auto; }
+        .boutique-slide:hover { border-color: var(--gold); }
+        .boutique-slide img { height: 180px; object-fit: contain; margin: 0 auto 20px; }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-[100]">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-24">
+            <div class="py-2"><a href="/"><img src="logo.png" alt="Logo" class="nav-logo"></a></div>
+            
+            <nav class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.2em] font-bold">
+                <a href="/" class="hover:text-gold transition">Boutique</a>
+                <a href="/disney" class="text-gold">Disney</a>
+                <a href="/mens" class="hover:text-gold transition">Men's</a>
+                <a href="/blog" class="hover:text-gold transition">Blog</a>
+            </nav>
+
+            <div class="flex items-center space-x-6">
+                <!-- LIVE SEARCH -->
+                <div class="search-wrapper hidden lg:flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-gray-400"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="productSearch" placeholder="Search Magic..." onkeyup="filterProducts()">
+                </div>
+                <a href="https://amzn.to/4egrVbL" target="_blank" class="bg-black text-white px-6 py-3 text-[10px] uppercase tracking-widest font-bold hover:bg-gold transition">Shop Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- DISNEY HERO -->
+    <section class="relative h-[85vh] flex items-end justify-start overflow-hidden">
+        <img src="https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0ca9294a-693b-4a85-b75c-43599e3bc311.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Disney Hero">
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="relative z-20 pb-24 pl-20">
+            <a href="#collection" class="btn-grand-luxury">Explore The Magic</a>
+        </div>
+    </section>
+
+    <!-- DISNEY COLLECTION GRID (13 PRODUCTS) -->
+    <section id="collection" class="py-24 px-6 max-w-7xl mx-auto">
+        <div id="noResults" class="hidden text-center py-20 text-gray-400 italic">No magical items found matching your search.</div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16" id="productGrid">
+            
+            <!-- 1. Minnie Mouse Parfum -->
+            <div class="product-card p-10 text-center">
+                <img src="https://m.media-amazon.com/images/I/61Vsfc8Al+L._AC_SL1000_.jpg" class="h-80 object-contain mb-10 mx-auto">
+                <div class="flex-grow space-y-4">
+                    <h3 class="text-2xl serif product-title">Minnie Mouse Parfum</h3>
+                    <p class="text-gold font-bold text-lg">$217.00</p>
+                    <details class="group">
+                        <summary class="text-[10px] uppercase font-bold text-gray-400 py-3 tracking-widest">Scent Story ↓</summary>
+                        <div class="desc-inner p-6 text-left text-gray-600 space-y-4">
+                            Celebrate the sweetheart of Disney magic with this whimsical and enchanting creation. The fragrance opens with a playful swirl of fluffy marshmallow, juicy raspberry, and golden caramel, creating a delicious confection as joyful as Minnie herself. Creamy coconut and velvety vanilla Absolute add a layer of sophisticated warmth, grounded by a touch of cedarwood. This limited edition parfum is carried in a legendary Disney-red lacquered glass bottle, hand-polished to a mirror shine. The iconic Minnie bow cap is lavishly adorned with brilliant Swarovski crystals, making it a true collector's masterpiece that blends world-class haute parfumerie with the timeless wonder of childhood imagination. Reserved for those who cherish love, friendship, and pure Disney magic.
+                        </div>
+                    </details>
+                </div>
+                <a href="https://amzn.to/42BQ3P0" target="_blank" class="mt-10 block w-full py-5 bg-black text-white text-[10px] font-bold uppercase tracking-widest hover:bg-disney-red transition">Shop Amazon</a>
+            </div>
+
+            <!-- 2. Mickey Mouse Parfum -->
+            <div class="product-card p-10 text-center">
+                <img src="https://m.media-amazon.com/images/I/61l4NdSsTqL._AC_SL1000_.jpg" class="h-80 object-contain mb-10 mx-auto">
+                <div class="flex-grow space-y-4">
+                    <h3 class="text-2xl serif product-title">Mickey Mouse Parfum</h3>
+                    <p class="text-gold font-bold text-lg">$197.50</p>
+                    <details class="group">
+                        <summary class="text-[10px] uppercase font-bold text-gray-400 py-3 tracking-widest">Scent Story ↓</summary>
+                        <div class="desc-inner p-6 text-left text-gray-600 space-y-4">
+                            Experience where citrus spark meets creamy warmth in this tribute to the greatest love story ever told. Mickey Mouse Parfum opens with a bright, energetic burst of bergamot and mandarin, sharpened by a touch of spicy cardamom. The scent then transitions into a smooth, exotic heart of orange blossom, coconut milk, and a decadent hint of cocoa. As it settles on the skin, amber, sandalwood, and tonka bean wrap the wearer in a velvety warmth that lingers for hours. The deep strawberry-red bottle is crowned with the iconic Mickey ears, meticulously set with Swarovski crystals in his classic red and black hues. A sophisticated, long-lasting niche parfum designed to transport you to a world where dreams and love shine brightest.
+                        </div>
+                    </details>
+                </div>
+                <a href="https://amzn.to/493OM6W" target="_blank" class="mt-10 block w-full py-5 bg-black text-white text-[10px] font-bold uppercase tracking-widest hover:bg-disney-red transition">Shop Amazon</a>
+            </div>
+
+            <!-- 3. Mickey & Minnie Duo -->
+            <div class="product-card p-10 text-center">
+                <img src="https://m.media-amazon.com/images/I/611kMRVzQWL._AC_SL1000_.jpg" class="h-80 object-contain mb-10 mx-auto">
+                <div class="flex-grow space-y-4">
+                    <h3 class="text-2xl serif product-title">Mickey & Minnie Duo</h3>
+                    <p class="text-gold font-bold text-lg">$156.00</p>
+                    <details class="group">
+                        <summary class="text-[10px] uppercase font-bold text-gray-400 py-3 tracking-widest">Details ↓</summary>
+                        <div class="desc-inner p-6 text-left text-gray-600 space-y-4">
+                            The Mickey Mouse and Minnie Mouse Duo features a beautifully crafted limited-edition travel case alongside two 8ml refills. Mickey Mouse provides a vibrant journey of bergamot, mandarin, and cardamom, while Minnie Mouse offers a playful, sweet blend of marshmallow and raspberry. This set allows you to experience the meeting of two worlds: Disney magic and House of Sillage luxury. A perfect companion for those who appreciate romance, nostalgia, and the art of fine scent.
+                        </div>
+                    </details>
+                </div>
+                <a href="https://amzn.to/4t3eRKJ" target="_blank" class="mt-10 block w-full py-5 bg-black text-white text-[10px] font-bold uppercase tracking-widest hover:bg-disney-red transition">Shop Amazon</a>
+            </div>
+
+            <!-- 4. Sample Set -->
+            <div class="product-card p-10 text-center">
+                <img src="https://m.media-amazon.com/images/I/51uylt4y9UL._AC_SL1000_.jpg" class="h-80 object-contain mb-10 mx-auto">
+                <div class="flex-grow space-y-4">
+                    <h3 class="text-2xl serif product-title">Disney Sample Set</h3>
+                    <p class="text-gold font-bold text-lg">$35.00</p>
+                    <details class="group">
+                        <summary class="text-[10px] uppercase font-bold text-gray-400 py-3 tracking-widest">Details ↓</summary>
+                        <div class="desc-inner p-6 text-left text-gray-600 space-y-4">
+                            Discover the artistry of the Disney collection through this charming sample set. It features 1.8ml samples of both Mickey Mouse and Minnie Mouse perfumes. Mickey’s scent is a vibrant citrus journey with a creamy vanilla base, while Minnie’s offers a joyful marshmallow and coconut experience. This set is a perfect introduction to the world of Disney luxury, capturing the magic, joy, and timeless romance of their journey together.
+                        </div>
+                    </details>
+                </div>
+                <a href="https://amzn.to/423n72j" target="_blank" class="mt-10 block w-full py-5 bg-black text-white text-[10px] font-bold uppercase tracking-widest hover:bg-disney-red transition">Shop Amazon</a>
+            </div>
+
+            <!-- 5. Disney Candle -->
+            <div class="product-card p-10 text-center">
+                <img src="https://m.media-amazon.com/images/I/51dbBK80JoL._AC_SL1000_.jpg" class="h-80 object-contain mb-10 mx-auto">
+                <div class="flex-grow space-y-4">
+                    <h3 class="text-2xl serif product-title">Disney Scented Candle</h3>
+                    <p class="text-gold font-bold text-lg">$30.00</p>
+                    <details class="group">
+                        <summary class="text-[10px] uppercase font-bold text-gray-400 py-3 tracking-widest">Details ↓</summary>
+                        <div class="desc-inner p-6 text-left text-gray-600 space-y-4">
+                            Transport your home to the magic of Disney World with this luxury scented candle. Offering an enduring 60-hour burn, it releases a radiant opening of bergamot and mandarin that brightens any room. The heart reveals orange blossom and coconut milk, while the base of amber and sandalwood leaves a lasting trail of cozy sophistication. Crafted with the finest quality wax and oils for an even, enchanting fragrance experience that evokes cherished memories.
+                        </div>
+                    </details>
+                </div>
+                <a href="https://amzn.to/4ufTkiH" target="_blank" class="mt-10 block w-full py-5 bg-black text-white text-[10px] font-bold uppercase tracking-widest hover:bg-disney-red transition">Shop Amazon</a>
+            </div>
+
+            <!-- 6. Eyeshadow Quint -->
+            <div class="product-card p-10 text-center">
+                <img src="https://m.media-amazon.com/images/I/71-Q8AsJxoL._AC_SL1000_.jpg" class="h-80 object-contain mb-10 mx-auto">
+                <div class="flex-grow space-y-4">
+                    <h3 class="text-2xl serif product-title">Eyeshadow Quint</h3>
+                    <p class="text-gold font-bold text-lg">$34.00</p>
+                    <details class="group">
+                        <summary class="text-[10px] uppercase font-bold text-gray-400 py-3 tracking-widest">Details ↓</summary>
+                        <div class="desc-inner p-6 text-left text-gray-600 space-y-4">
+                            Celebrate the greatest love story with this limited-edition Eyeshadow Quint. Featuring rich tones of rose gold, mauve, deep bronze, and luminous pearls, this palette creates captivating, multi-dimensional eye looks. The creamy texture blends effortlessly, delivering full-coverage pigment in a single swipe. Housed in a collectible compact that reflects the artistry of House of Sillage, merging high fashion with modern beauty innovation.
+                        </div>
+                    </details>
+                </div>
+                <a href="https://amzn.to/4vZLFqq" target="_blank" class="mt-10 block w-full py-5 bg-black text-white text-[10px] font-bold uppercase tracking-widest hover:bg-disney-red transition">Shop Amazon</a>
+            </div>
+
+            <!-- 7. Complexion Duo -->
+            <div class="product-card p-10 text-center">
+                <img src="https://m.media-amazon.com/images/I/61RXfiTh8EL._AC_SL1000_.jpg" class="h-80 object-contain mb-10 mx-auto">
+                <div class="flex-grow space-y-4">
+                    <h3 class="text-2xl serif product-title">Complexion Duo</h3>
+                    <p class="text-gold font-bold text-lg">$29.00</p>
+                    <details class="group">
+                        <summary class="text-[10px] uppercase font-bold text-gray-400 py-3 tracking-widest">Details ↓</summary>
+                        <div class="desc-inner p-6 text-left text-gray-600 space-y-4">
+                            Expertly curated to deliver universally flattering color for all skin tones. This duo features a neutral rose bronze blush and a highlighter designed to sculpt and brighten with diamond-like brilliance. The sustainable, magnetized refillable system allows for effortless interchange. Inspired by Mickey and Minnie’s timeless romance, it provides a photo-ready, radiant flush with a smooth cream-to-powder finish.
+                        </div>
+                    </details>
+                </div>
+                <a href="https://amzn.to/4ef4506" target="_blank" class="mt-10 block w-full py-5 bg-black text-white text-[10px] font-bold uppercase tracking-widest hover:bg-disney-red transition">Shop Amazon</a>
+            </div>
+
+            <!-- 8. Nude Lipstick -->
+            <div class="product-card p-10 text-center">
+                <img src="https://m.media-amazon.com/images/I/51vj1XWQuVL._AC_SL1000_.jpg" class="h-80 object-contain mb-10 mx-auto">
+                <div class="flex-grow space-y-4">
+                    <h3 class="text-2xl serif product-title">Playful Nude Lipstick</h3>
+                    <p class="text-gold font-bold text-lg">$29.00</p>
+                    <details class="group">
+                        <summary class="text-[10px] uppercase font-bold text-gray-400 py-3 tracking-widest">Details ↓</summary>
+                        <div class="desc-inner p-6 text-left text-gray-600 space-y-4">
+                            Enriched with real White Diamond Powder, this luxury lipstick reflects and diffuses light for an flawlessly even finish. The creamy, melt-in texture provides instant hydration and comfort that lasts for hours. Expertly balanced for intense full-coverage color and a refined sparkling glow, it offers a sensorial experience worthy of Disney royalty. Housed in an eco-conscious, magnetized refillable case.
+                        </div>
+                    </details>
+                </div>
+                <a href="https://amzn.to/3QKbESG" target="_blank" class="mt-10 block w-full py-5 bg-black text-white text-[10px] font-bold uppercase tracking-widest hover:bg-disney-red transition">Shop Amazon</a>
+            </div>
+
+            <!-- 9. Red Lipstick -->
+            <div class="product-card p-10 text-center">
+                <img src="https://m.media-amazon.com/images/I/51MoGz+dCYL._AC_SL1000_.jpg" class="h-80 object-contain mb-10 mx-auto">
+                <div class="flex-grow space-y-4">
+                    <h3 class="text-2xl serif product-title">Playful Red Lipstick</h3>
+                    <p class="text-gold font-bold text-lg">$29.00</p>
+                    <details class="group">
+                        <summary class="text-[10px] uppercase font-bold text-gray-400 py-3 tracking-widest">Details ↓</summary>
+                        <div class="desc-inner p-6 text-left text-gray-600 space-y-4">
+                            The ultimate statement red. Infused with diamond powder and Vitamin E, this lipstick delivers high-pigment color and firming radiance. The formula blurs imperfections and enhances lip texture for a smooth, photo-ready pout. Crafted for exceptional glide and long-lasting comfort, it represents the mischievous charm and glamour of Mickey and Minnie in a collectible jewel vessel.
+                        </div>
+                    </details>
+                </div>
+                <a href="https://amzn.to/4cXRhJd" target="_blank" class="mt-10 block w-full py-5 bg-black text-white text-[10px] font-bold uppercase tracking-widest hover:bg-disney-red transition">Shop Amazon</a>
+            </div>
+
+            <!-- 10. Lip Gloss -->
+            <div class="product-card p-10 text-center">
+                <img src="https://m.media-amazon.com/images/I/41tditfWXvL._AC_SL1000_.jpg" class="h-80 object-contain mb-10 mx-auto">
+                <div class="flex-grow space-y-4">
+                    <h3 class="text-2xl serif product-title">Lip Gloss Luminizer</h3>
+                    <p class="text-gold font-bold text-lg">$36.00</p>
+                    <details class="group">
+                        <summary class="text-[10px] uppercase font-bold text-gray-400 py-3 tracking-widest">Details ↓</summary>
+                        <div class="desc-inner p-6 text-left text-gray-600 space-y-4">
+                            Capture sweet innocence with this sheer, weightless Lip Luminizer Gloss. Its non-sticky texture glides on smoothly to deliver a mirror-like finish that building up to a dramatic, glass-like brilliance. Worn alone or over lipstick, it reflects light to enhance lip dimension with simple elegance. A must-have for everyday shine or a finishing touch to a bold evening look.
+                        </div>
+                    </details>
+                </div>
+                <a href="https://amzn.to/3QHg4tA" target="_blank" class="mt-10 block w-full py-5 bg-black text-white text-[10px] font-bold uppercase tracking-widest hover:bg-disney-red transition">Shop Amazon</a>
+            </div>
+
+            <!-- 11. Mickey Friends Travel Case -->
+            <div class="product-card p-10 text-center border-zinc-200 border">
+                <img src="https://m.media-amazon.com/images/I/61zLJZp-x7L._AC_SL1000_.jpg" class="h-80 object-contain mb-10 mx-auto">
+                <div class="flex-grow space-y-4">
+                    <h3 class="text-2xl serif product-title">Mickey & Friends Spray</h3>
+                    <p class="text-gold font-bold text-lg">$118.00</p>
+                    <details class="group">
+                        <summary class="text-[10px] uppercase font-bold text-gray-400 py-3 tracking-widest">Details ↓</summary>
+                        <div class="desc-inner p-6 text-left text-gray-600 space-y-4">
+                            Carry the magic wherever you go with this beautifully crafted travel case. Set includes the limited-edition Mickey & Friends case plus two 8ml refills: Joyful Escape (Bergamot/Green Apple/Vanilla) and Blissful Moments (Cherry/Blood Orange/Praline). A celebration of living well and finding joy in life's smallest moments, designed for the modern explorer.
+                        </div>
+                    </details>
+                </div>
+                <a href="https://amzn.to/4vSyqb4" target="_blank" class="mt-10 block w-full py-5 bg-black text-white text-[10px] font-bold uppercase tracking-widest hover:bg-disney-red transition">Shop Amazon</a>
+            </div>
+
+            <!-- 12. Refill Duo -->
+            <div class="product-card p-10 text-center border-zinc-200 border">
+                <img src="https://m.media-amazon.com/images/I/51tBp09TiCL._AC_SL1000_.jpg" class="h-80 object-contain mb-10 mx-auto">
+                <div class="flex-grow space-y-4">
+                    <h3 class="text-2xl serif product-title">Mickey Refill Duo</h3>
+                    <p class="text-gold font-bold text-lg">$50.00</p>
+                    <details class="group">
+                        <summary class="text-[10px] uppercase font-bold text-gray-400 py-3 tracking-widest">Details ↓</summary>
+                        <div class="desc-inner p-6 text-left text-gray-600 space-y-4">
+                            Ensure your travel case is always filled with magic. This duo includes 8ml refills of Joyful Escape and Blissful Moments. Joyful Escape offers a crisp bergamot and musk elegance, while Blissful Moments provides a cozy blend of patchouli and blonde woods. Compatible with any House of Sillage Travel Spray case.
+                        </div>
+                    </details>
+                </div>
+                <a href="https://amzn.to/3PdH7fC" target="_blank" class="mt-10 block w-full py-5 bg-black text-white text-[10px] font-bold uppercase tracking-widest hover:bg-disney-red transition">Shop Amazon</a>
+            </div>
+
+            <!-- 13. Mickey Discovery Set -->
+            <div class="product-card p-10 text-center border-zinc-200 border">
+                <img src="https://m.media-amazon.com/images/I/51pTzfK0ZyL._AC_SL1000_.jpg" class="h-80 object-contain mb-10 mx-auto">
+                <div class="flex-grow space-y-4">
+                    <h3 class="text-2xl serif product-title">Mickey Discovery Set</h3>
+                    <p class="text-gold font-bold text-lg">$35.00</p>
+                    <details class="group">
+                        <summary class="text-[10px] uppercase font-bold text-gray-400 py-3 tracking-widest">Details ↓</summary>
+                        <div class="desc-inner p-6 text-left text-gray-600 space-y-4">
+                            Step into a world of enchantment with the Discovery Sample Set. Featuring two 1.8ml vials, Joyful Escape and Blissful Moments, this set is designed to celebrate living well. Experience the crisp Green Apple and Jasmine of Mickey’s world alongside the Blood Orange and Purple Orchid of Minnie’s, discovering your own magical signature.
+                        </div>
+                    </details>
+                </div>
+                <a href="https://amzn.to/4umL9Bj" target="_blank" class="mt-10 block w-full py-5 bg-black text-white text-[10px] font-bold uppercase tracking-widest hover:bg-disney-red transition">Shop Amazon</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BOUTIQUE SLIDER (INCLUDES ALL 9 HOME PRODUCTS) -->
+    <section class="py-24 bg-zinc-50 border-t">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-gold text-[10px] uppercase tracking-[0.4em] mb-4 block font-bold">The Sillage Boutique</span>
+            <h2 class="text-3xl serif italic mb-12">Signature Masterpieces Gallery</h2>
+            
+            <div class="swiper boutiqueSwiper">
+                <div class="swiper-wrapper">
+                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61ECqTv30WL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Abundance</h4></a>
+                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61Iz40fik4L._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Truth</h4></a>
+                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61CgSjNBAhL._AC_SX679_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Bijoux</h4></a>
+                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61l0zhc6QpL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Passion</h4></a>
+                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/610IISRi+AL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Pink Panther</h4></a>
+                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/618RFeJRMRL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Wonder Woman</h4></a>
+                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/618oAj451FL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Slytherin</h4></a>
+                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61y3uAi6WXL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Gryffindor</h4></a>
+                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/619uKzBkyfL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Hufflepuff</h4></a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <a href="/" class="mt-12 inline-block border-b border-black pb-1 text-[9px] uppercase font-bold tracking-[0.2em] hover:text-gold transition">Back to Main Boutique</a>
+        </div>
+    </section>
+
+    <!-- FOOTER & AFFILIATE DISCLOSURE -->
+    <footer class="bg-white border-t border-gray-100 py-24 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col items-center">
+            <img src="logo.png" alt="Logo" class="h-16 w-auto grayscale opacity-40 mb-12">
+            <div class="text-center space-y-10 max-w-4xl pt-10 border-t border-gray-50">
+                <div class="bg-zinc-50 p-10 rounded-lg">
+                    <p class="text-[11px] text-gray-400 leading-relaxed uppercase tracking-widest">
+                        <strong>Affiliate Disclosure:</strong> <br><br>
+                        The Sillage Guide is an independent affiliate showcase. As an Amazon Associate, we earn a commission from qualifying purchases made through the Disney x House of Sillage links on this page. These earnings help us maintain our curation and provide insights into haute parfumerie. Disney characters and House of Sillage trademarks are the property of their respective owners.
+                    </p>
+                </div>
+                <p class="text-[9px] text-gray-300">© 2024 thesillageguide.online | All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // FIXED BOUTIQUE SLIDER INITIALIZATION
+        new Swiper(".boutiqueSwiper", { 
+            slidesPerView: 1, spaceBetween: 20, loop: true, 
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: { el: ".swiper-pagination", clickable: true }, 
+            breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 4 } } 
+        });
+
+        // LIVE SEARCH LOGIC
+        function filterProducts() {
+            let input = document.getElementById('productSearch').value.toLowerCase();
+            let cards = document.getElementsByClassName('product-card');
+            let noResults = document.getElementById('noResults');
+            let visibleCount = 0;
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].querySelector('.product-title').innerText.toLowerCase();
+                if (title.includes(input)) {
+                    cards[i].classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    cards[i].classList.add('hidden');
+                }
+            }
+            visibleCount > 0 ? noResults.classList.add('hidden') : noResults.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
