@@ -429,5 +429,17 @@
             visibleCount > 0 ? noResults.classList.add('hidden') : noResults.classList.remove('hidden');
         }
     </script>
+    <script>
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        if (menu.classList.contains('translate-x-full')) {
+            menu.classList.remove('translate-x-full');
+            menu.classList.add('translate-x-0');
+        } else {
+            menu.classList.remove('translate-x-0');
+            menu.classList.add('translate-x-full');
+        }
+    }
+</script>
 </body>
 </html>
