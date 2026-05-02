@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sillage Journal | Luxury Fragrance Insights | The Sillage Guide</title>
+    <title>The Sillage Journal | Luxury Fragrance Insights</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" href="https://www.thesillageguide.online/favicon.png">
 
     <!-- Stylesheets & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,16 +17,10 @@
         :root { --gold: #c5a059; --dark: #1a1a1a; --off-white: #fdfdfd; }
         body { font-family: 'Montserrat', sans-serif; background-color: var(--off-white); color: var(--dark); scroll-behavior: smooth; overflow-x: hidden; }
         h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
-
-        /* Navigation Logo */
         .nav-logo { height: 100px; width: auto; transition: transform 0.3s ease; }
-        
-        /* Search Bar */
         .search-wrapper { position: relative; border-bottom: 1px solid #eee; padding: 2px 0; transition: 0.3s; }
         .search-wrapper:focus-within { border-color: var(--gold); }
         #blogSearch { background: transparent; border: none; outline: none; font-size: 9px; text-transform: uppercase; letter-spacing: 0.2em; width: 140px; }
-
-        /* GRAND LUXURY BUTTON */
         .btn-grand-luxury {
             background-color: white; color: black; padding: 24px 70px; font-size: 13px;
             letter-spacing: 0.5em; text-transform: uppercase; font-weight: 700;
@@ -35,26 +29,21 @@
             cursor: pointer;
         }
         .btn-grand-luxury:hover { background-color: var(--gold); color: white; border-color: var(--gold); transform: translateY(-5px); }
-
-        /* Blog Cards */
         .blog-card { transition: all 0.4s ease; background: white; border: 1px solid #f2f2f2; height: 100%; display: flex; flex-direction: column; }
         .blog-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.04); }
         .blog-card.hidden { display: none; }
-
-        /* Slider */
         .boutique-slide { text-align: center; background: #fff; padding: 30px; border: 1px solid #eee; transition: 0.3s; display: flex; flex-direction: column; }
         .boutique-slide img { height: 150px; object-fit: contain; margin: 0 auto 20px; }
     </style>
 </head>
 <body>
 
-    <!-- HEADER WITH MOBILE MENU -->
+    <!-- HEADER -->
     <header class="bg-white border-b border-gray-100 sticky top-0 z-[100]">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-24">
-            <!-- Logo with Root Path / -->
-            <div class="py-2"><a href="/"><img src="/logo.png" alt="Logo" class="nav-logo"></a></div>
+            <!-- FULL DOMAIN LOGO PATH -->
+            <div class="py-2"><a href="/"><img src="https://www.thesillageguide.online/logo.png" alt="Logo" class="nav-logo"></a></div>
             
-            <!-- Links with Root Paths / -->
             <nav class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.2em] font-bold">
                 <a href="/" class="hover:text-gold transition">Boutique</a>
                 <a href="/disney" class="hover:text-gold transition">Disney</a>
@@ -63,20 +52,17 @@
             </nav>
 
             <div class="flex items-center space-x-6">
-                <!-- Search -->
                 <div class="search-wrapper hidden lg:flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-gray-400"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                     <input type="text" id="blogSearch" placeholder="Search Journal..." onkeyup="filterBlogs()">
                 </div>
-                <!-- Mobile Toggle -->
                 <button class="md:hidden p-2" onclick="toggleMobileMenu()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 </button>
-                <a href="/" class="hidden sm:block bg-black text-white px-6 py-3 text-[10px] uppercase font-bold hover:bg-gold transition">Shop Now</a>
+                <a href="https://amzn.to/4egrVbL" target="_blank" class="hidden sm:block bg-black text-white px-6 py-3 text-[10px] uppercase font-bold hover:bg-gold transition">Shop Now</a>
             </div>
         </div>
 
-        <!-- Mobile Overlay -->
         <div id="mobileMenu" class="fixed inset-0 bg-white z-[200] flex flex-col items-center justify-center space-y-8 transition-all duration-500 translate-x-full">
             <button class="absolute top-8 right-8" onclick="toggleMobileMenu()"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
             <a href="/" class="text-xl uppercase tracking-widest" onclick="toggleMobileMenu()">Boutique</a>
@@ -86,7 +72,7 @@
         </div>
     </header>
 
-    <!-- BLOG HERO -->
+    <!-- BLOG HERO (USING UNSPLASH FOR TESTING) -->
     <section class="relative h-[60vh] flex items-end justify-start overflow-hidden">
         <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=2000" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-black/20"></div>
@@ -101,9 +87,9 @@
         <div id="noResults" class="hidden text-center py-20 text-gray-400 italic">No matching articles found.</div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16" id="blogGrid">
             
-            <!-- Article 1: Minnie Mouse -->
+            <!-- Article: Minnie Mouse (Using Full URL for your Canva image) -->
             <article class="blog-card overflow-hidden">
-                <img src="/minnie-blog-hero.jpg" class="w-full h-64 object-cover" alt="Minnie Mouse">
+                <img src="https://www.thesillageguide.online/minnie-blog-hero.jpg" class="w-full h-64 object-cover" alt="Minnie Mouse" onerror="this.src='https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=800'">
                 <div class="p-10 flex flex-col flex-grow">
                     <span class="text-gold text-[9px] font-bold uppercase tracking-widest mb-4">May 2024 • Review</span>
                     <h2 class="text-2xl serif mb-4 blog-title">Minnie Mouse House of Sillage: A Review</h2>
@@ -121,9 +107,9 @@
             <h2 class="text-3xl serif italic mb-12">Shop The Signature Collection</h2>
             <div class="swiper boutiqueSwiper">
                 <div class="swiper-wrapper">
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61ECqTv30WL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Whispers of Abundance</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61Iz40fik4L._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Whispers of Truth</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61CgSjNBAhL._AC_SX679_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Hauts Bijoux</h4></a>
+                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61ECqTv30WL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Abundance</h4></a>
+                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61Iz40fik4L._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Truth</h4></a>
+                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61CgSjNBAhL._AC_SX679_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Bijoux</h4></a>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -132,23 +118,14 @@
 
     <!-- FOOTER -->
     <footer class="bg-white border-t border-gray-100 py-16 text-center opacity-40">
-        <img src="/logo.png" alt="Logo" class="h-12 mx-auto mb-6 grayscale">
+        <img src="https://www.thesillageguide.online/logo.png" alt="Logo" class="h-12 mx-auto mb-6 grayscale">
         <p class="text-[9px] uppercase tracking-widest">© 2024 thesillageguide.online</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Swiper
         new Swiper(".boutiqueSwiper", { slidesPerView: 1, spaceBetween: 20, loop: true, autoplay: { delay: 4000 }, pagination: { el: ".swiper-pagination", clickable: true }, breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 4 } } });
-
-        // Mobile Menu Toggle
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('translate-x-full');
-            menu.classList.toggle('translate-x-0');
-        }
-
-        // Search Filter
+        function toggleMobileMenu() { const menu = document.getElementById('mobileMenu'); menu.classList.toggle('translate-x-full'); menu.classList.toggle('translate-x-0'); }
         function filterBlogs() {
             let input = document.getElementById('blogSearch').value.toLowerCase();
             let cards = document.getElementsByClassName('blog-card');
@@ -156,12 +133,7 @@
             let visibleCount = 0;
             for (let i = 0; i < cards.length; i++) {
                 let title = cards[i].querySelector('.blog-title').innerText.toLowerCase();
-                if (title.includes(input)) {
-                    cards[i].classList.remove('hidden');
-                    visibleCount++;
-                } else {
-                    cards[i].classList.add('hidden');
-                }
+                if (title.includes(input)) { cards[i].classList.remove('hidden'); visibleCount++; } else { cards[i].classList.add('hidden'); }
             }
             visibleCount > 0 ? noResults.classList.add('hidden') : noResults.classList.remove('hidden');
         }
