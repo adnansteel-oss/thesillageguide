@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Sillage Journal | Luxury Fragrance Insights | The Sillage Guide</title>
-    <meta name="description" content="Explore the world of haute parfumerie. Deep dives into House of Sillage craftsmanship, scent notes, and luxury lifestyle guides.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
@@ -19,7 +18,7 @@
         body { font-family: 'Montserrat', sans-serif; background-color: var(--off-white); color: var(--dark); scroll-behavior: smooth; overflow-x: hidden; }
         h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
 
-        /* Navigation */
+        /* Navigation Logo */
         .nav-logo { height: 100px; width: auto; transition: transform 0.3s ease; }
         
         /* Search Bar */
@@ -42,195 +41,130 @@
         .blog-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.04); }
         .blog-card.hidden { display: none; }
 
-        /* Boutique Slider Section */
-        .boutiqueSwiper { width: 100%; padding: 40px 0; }
+        /* Slider */
         .boutique-slide { text-align: center; background: #fff; padding: 30px; border: 1px solid #eee; transition: 0.3s; display: flex; flex-direction: column; }
-        .boutique-slide:hover { border-color: var(--gold); }
         .boutique-slide img { height: 150px; object-fit: contain; margin: 0 auto 20px; }
-        
-        .section-divider { width: 40px; height: 1px; background: var(--gold); margin: 1.5rem auto; }
     </style>
 </head>
 <body>
 
-   <!-- UPDATED HEADER WITH MOBILE MENU -->
-<header class="bg-white border-b border-gray-100 sticky top-0 z-[100]">
-    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-24">
-        <!-- Logo -->
-        <div class="py-2">
-            <a href="/"><img src="/logo.png" alt="The Sillage Guide" class="nav-logo"></a>
-        </div>
-        
-        <!-- Desktop Navigation (Hidden on Mobile) -->
-        <nav class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.2em] font-bold">
-            <a href="/" class="hover:text-gold transition">Boutique</a>
-            <a href="/disney" class="hover:text-gold transition">Disney</a>
-            <a href="/mens" class="hover:text-gold transition">Men's</a>
-            <a href="/blog" class="hover:text-gold transition">Blog</a>
-        </nav>
-
-        <div class="flex items-center space-x-4">
-            <!-- Mobile Menu Toggle Button (Only visible on mobile) -->
-            <button class="md:hidden p-2 text-dark focus:outline-none" onclick="toggleMobileMenu()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-            </button>
+    <!-- HEADER WITH MOBILE MENU -->
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-[100]">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-24">
+            <!-- Logo with Root Path / -->
+            <div class="py-2"><a href="/"><img src="/logo.png" alt="Logo" class="nav-logo"></a></div>
             
-            <!-- Desktop Shop Button -->
-            <a href="https://amzn.to/4egrVbL" target="_blank" class="hidden sm:block bg-black text-white px-6 py-3 text-[10px] uppercase tracking-widest font-bold hover:bg-gold transition">Shop Now</a>
-        </div>
-    </div>
+            <!-- Links with Root Paths / -->
+            <nav class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.2em] font-bold">
+                <a href="/" class="hover:text-gold transition">Boutique</a>
+                <a href="/disney" class="hover:text-gold transition">Disney</a>
+                <a href="/mens" class="hover:text-gold transition">Men's</a>
+                <a href="/blog" class="text-gold">Blog</a>
+            </nav>
 
-    <!-- MOBILE OVERLAY MENU (Hidden by default) -->
-    <div id="mobileMenu" class="fixed inset-0 bg-white z-[200] flex flex-col items-center justify-center space-y-8 transition-all duration-500 translate-x-full overflow-hidden">
-        <button class="absolute top-8 right-8 p-2" onclick="toggleMobileMenu()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-        <a href="/" class="text-xl uppercase tracking-[0.3em] font-bold" onclick="toggleMobileMenu()">Boutique</a>
-        <a href="/disney" class="text-xl uppercase tracking-[0.3em] font-bold" onclick="toggleMobileMenu()">Disney</a>
-        <a href="/mens" class="text-xl uppercase tracking-[0.3em] font-bold" onclick="toggleMobileMenu()">Men's</a>
-        <a href="/blog" class="text-xl uppercase tracking-[0.3em] font-bold" onclick="toggleMobileMenu()">Blog</a>
-        <a href="https://amzn.to/4egrVbL" target="_blank" class="bg-black text-white px-10 py-4 uppercase tracking-widest font-bold text-sm">Shop Now</a>
-    </div>
-</header>
+            <div class="flex items-center space-x-6">
+                <!-- Search -->
+                <div class="search-wrapper hidden lg:flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-gray-400"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="blogSearch" placeholder="Search Journal..." onkeyup="filterBlogs()">
+                </div>
+                <!-- Mobile Toggle -->
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+                <a href="/" class="hidden sm:block bg-black text-white px-6 py-3 text-[10px] uppercase font-bold hover:bg-gold transition">Shop Now</a>
+            </div>
+        </div>
+
+        <!-- Mobile Overlay -->
+        <div id="mobileMenu" class="fixed inset-0 bg-white z-[200] flex flex-col items-center justify-center space-y-8 transition-all duration-500 translate-x-full">
+            <button class="absolute top-8 right-8" onclick="toggleMobileMenu()"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+            <a href="/" class="text-xl uppercase tracking-widest" onclick="toggleMobileMenu()">Boutique</a>
+            <a href="/disney" class="text-xl uppercase tracking-widest" onclick="toggleMobileMenu()">Disney</a>
+            <a href="/mens" class="text-xl uppercase tracking-widest" onclick="toggleMobileMenu()">Men's</a>
+            <a href="/blog" class="text-xl uppercase tracking-widest" onclick="toggleMobileMenu()">Blog</a>
+        </div>
+    </header>
 
     <!-- BLOG HERO -->
-    <section class="relative h-[80vh] flex items-end justify-start overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=2000" class="absolute inset-0 w-full h-full object-cover" alt="Blog Hero">
+    <section class="relative h-[60vh] flex items-end justify-start overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=2000" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-black/20"></div>
-        <div class="relative z-20 pb-24 pl-20 text-white">
-            <span class="uppercase tracking-[0.5em] text-[10px] mb-4 block">The Sillage Journal</span>
-            <h1 class="text-4xl md:text-6xl serif italic mb-8 drop-shadow-md leading-tight">Stories of <br>Olfactory Art</h1>
-            <a href="#articles" class="btn-grand-luxury">Read The Latest</a>
+        <div class="relative z-20 pb-20 pl-20 text-white">
+            <h1 class="text-4xl md:text-5xl serif italic mb-4">The Sillage Journal</h1>
+            <a href="#articles" class="btn-grand-luxury">Read Articles</a>
         </div>
     </section>
 
-    <!-- BLOG ARTICLES GRID -->
+    <!-- ARTICLES GRID -->
     <section id="articles" class="py-24 px-6 max-w-7xl mx-auto">
-        <div id="noResults" class="hidden text-center py-20 text-gray-400 italic">No articles found matching your search.</div>
-        
+        <div id="noResults" class="hidden text-center py-20 text-gray-400 italic">No matching articles found.</div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16" id="blogGrid">
             
-            <!-- Article 1 -->
+            <!-- Article 1: Minnie Mouse -->
             <article class="blog-card overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80" class="w-full h-64 object-cover" alt="Craftsmanship">
+                <img src="/minnie-blog-hero.jpg" class="w-full h-64 object-cover" alt="Minnie Mouse">
                 <div class="p-10 flex flex-col flex-grow">
-                    <span class="text-gold text-[9px] font-bold uppercase tracking-widest mb-4">May 01, 2024 • Atelier</span>
-                    <h2 class="text-2xl serif mb-4 blog-title">The 18-Hour Secret: Swarovski Craftsmanship</h2>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-8 font-light italic">Discover the painstaking process behind the iconic cupcake caps, where master artisans hand-set nearly 900 crystals over the course of two days...</p>
-                    href="/minnie-mouse-house-of-sillage" class="mt-auto text-[10px] uppercase font-bold tracking-[0.2em] border-b border-black pb-1 hover:text-gold hover:border-gold transition w-fit">Read Article</a>
-                </div>
-            </article>
-
-            <!-- Article 2 -->
-            <article class="blog-card overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1543473211-12712ca01c1e?auto=format&fit=crop&q=80" class="w-full h-64 object-cover" alt="Scent Guide">
-                <div class="p-10 flex flex-col flex-grow">
-                    <span class="text-gold text-[9px] font-bold uppercase tracking-widest mb-4">April 28, 2024 • Guide</span>
-                    <h2 class="text-2xl serif mb-4 blog-title">Mastering The Art of Scent Layering</h2>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-8 font-light italic">Unlock the potential of your fragrance collection by learning how to blend Whispers of Abundance with our signature Men's portfolio for a unique trail...</p>
-                    <a href="scent-layering-guide.html" class="mt-auto text-[10px] uppercase font-bold tracking-[0.2em] border-b border-black pb-1 hover:text-gold hover:border-gold transition w-fit">Read Article</a>
-                </div>
-            </article>
-
-            <!-- Article 3 -->
-            <article class="blog-card overflow-hidden">
-                <img src="https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0ca9294a-693b-4a85-b75c-43599e3bc311.jpg" class="w-full h-64 object-cover" alt="Disney Magic">
-                <div class="p-10 flex flex-col flex-grow">
-                    <span class="text-gold text-[9px] font-bold uppercase tracking-widest mb-4">April 20, 2024 • Collaboration</span>
-                    <h2 class="text-2xl serif mb-4 blog-title">Disney x Sillage: A Magical Olfactory Romance</h2>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-8 font-light italic">Step inside the vault of the Disney collection, exploring how the love between Mickey and Minnie was translated into world-class niche parfumerie...</p>
-                    <a href="disney-collaboration-story.html" class="mt-auto text-[10px] uppercase font-bold tracking-[0.2em] border-b border-black pb-1 hover:text-gold hover:border-gold transition w-fit">Read Article</a>
+                    <span class="text-gold text-[9px] font-bold uppercase tracking-widest mb-4">May 2024 • Review</span>
+                    <h2 class="text-2xl serif mb-4 blog-title">Minnie Mouse House of Sillage: A Review</h2>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8 font-light italic">Exploring the whimsical nostalgia and high-end luxury of this iconic Disney collaboration...</p>
+                    <a href="/minnie-mouse-house-of-sillage" class="mt-auto text-[10px] uppercase font-bold border-b border-black pb-1 hover:text-gold transition w-fit">Read Full Story</a>
                 </div>
             </article>
 
         </div>
     </section>
 
-    <!-- SIGNATURE PRODUCT SLIDER (CROSS PROMOTION) -->
+    <!-- BOUTIQUE SLIDER -->
     <section class="py-24 bg-zinc-50 border-t">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <span class="text-gold text-[10px] uppercase tracking-[0.4em] mb-4 block font-bold">Featured In Our Journal</span>
             <h2 class="text-3xl serif italic mb-12">Shop The Signature Collection</h2>
-            
             <div class="swiper boutiqueSwiper">
                 <div class="swiper-wrapper">
-                    <!-- ALL 9 HOME PRODUCTS -->
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61ECqTv30WL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Abundance</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61Iz40fik4L._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Truth</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61CgSjNBAhL._AC_SX679_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Bijoux</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61l0zhc6QpL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Passion</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/610IISRi+AL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Pink Panther</h4></a>
-                    <a href="/lass="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/618RFeJRMRL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Wonder Woman</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/618oAj451FL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Slytherin</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61y3uAi6WXL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Gryffindor</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/619uKzBkyfL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Hufflepuff</h4></a>
+                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61ECqTv30WL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Whispers of Abundance</h4></a>
+                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61Iz40fik4L._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Whispers of Truth</h4></a>
+                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61CgSjNBAhL._AC_SX679_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Hauts Bijoux</h4></a>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-            <a href="/" class="mt-12 inline-block border-b border-black pb-1 text-[9px] uppercase font-bold tracking-[0.2em] hover:text-gold transition">Back to Main Boutique</a>
         </div>
     </section>
 
-    <!-- FOOTER & AFFILIATE DISCLOSURE -->
-    <footer class="bg-white border-t border-gray-100 py-24 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col items-center">
-            <img src="/logo.png" alt="Logo" class="h-16 w-auto grayscale opacity-40 mb-12">
-            <div class="text-center space-y-10 max-w-4xl pt-10 border-t border-gray-50">
-                <p class="text-[11px] uppercase tracking-[0.4em] font-bold text-gold">The Sillage Journal Official Affiliate</p>
-                <div class="bg-zinc-50 p-10 rounded-lg">
-                    <p class="text-[11px] text-gray-400 leading-relaxed uppercase tracking-widest text-center">
-                        <strong>Affiliate Disclosure:</strong> <br><br>
-                        The Sillage Guide is an independent affiliate journal. As an Amazon Associate, we earn from qualifying purchases made through the links provided in our articles. These earnings support our mission to bring you the deepest insights into the world of luxury fragrances. All brand trademarks belong to House of Sillage.
-                    </p>
-                </div>
-                <p class="text-[9px] text-gray-300">© 2024 thesillageguide.online | All Rights Reserved.</p>
-            </div>
-        </div>
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-gray-100 py-16 text-center opacity-40">
+        <img src="/logo.png" alt="Logo" class="h-12 mx-auto mb-6 grayscale">
+        <p class="text-[9px] uppercase tracking-widest">© 2024 thesillageguide.online</p>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Swiper initialization for the Boutique slider
-        new Swiper(".boutiqueSwiper", { 
-            slidesPerView: 1, spaceBetween: 20, loop: true, 
-            autoplay: { delay: 4000, disableOnInteraction: false },
-            pagination: { el: ".swiper-pagination", clickable: true }, 
-            breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 4 } } 
-        });
+        // Swiper
+        new Swiper(".boutiqueSwiper", { slidesPerView: 1, spaceBetween: 20, loop: true, autoplay: { delay: 4000 }, pagination: { el: ".swiper-pagination", clickable: true }, breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 4 } } });
 
-        // LIVE SEARCH LOGIC FOR BLOGS
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('translate-x-full');
+            menu.classList.toggle('translate-x-0');
+        }
+
+        // Search Filter
         function filterBlogs() {
             let input = document.getElementById('blogSearch').value.toLowerCase();
             let cards = document.getElementsByClassName('blog-card');
             let noResults = document.getElementById('noResults');
             let visibleCount = 0;
             for (let i = 0; i < cards.length; i++) {
-                let titleElement = cards[i].querySelector('.blog-title');
-                if (titleElement) {
-                    let title = titleElement.innerText.toLowerCase();
-                    if (title.includes(input)) {
-                        cards[i].classList.remove('hidden');
-                        visibleCount++;
-                    } else {
-                        cards[i].classList.add('hidden');
-                    }
+                let title = cards[i].querySelector('.blog-title').innerText.toLowerCase();
+                if (title.includes(input)) {
+                    cards[i].classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    cards[i].classList.add('hidden');
                 }
             }
             visibleCount > 0 ? noResults.classList.add('hidden') : noResults.classList.remove('hidden');
         }
     </script>
-        <script>
-    function toggleMobileMenu() {
-        const menu = document.getElementById('mobileMenu');
-        if (menu.classList.contains('translate-x-full')) {
-            menu.classList.remove('translate-x-full');
-            menu.classList.add('translate-x-0');
-        } else {
-            menu.classList.remove('translate-x-0');
-            menu.classList.add('translate-x-full');
-        }
-    }
-</script>
 </body>
 </html>
