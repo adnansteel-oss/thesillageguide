@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Sillage Journal | Luxury Fragrance Insights | The Sillage Guide</title>
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" href="https://www.thesillageguide.online/favicon.png">
 
     <!-- Stylesheets & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,26 +19,38 @@
 
         .nav-logo { height: 100px; width: auto; transition: transform 0.3s ease; }
         
+        /* SEARCH BAR */
         .search-wrapper { position: relative; border-bottom: 1px solid #eee; padding: 2px 0; transition: 0.3s; }
         .search-wrapper:focus-within { border-color: var(--gold); }
         #blogSearch { background: transparent; border: none; outline: none; font-size: 9px; text-transform: uppercase; letter-spacing: 0.2em; width: 140px; }
 
-        .btn-grand-luxury {
-            background-color: white; color: black; padding: 24px 70px; font-size: 13px;
-            letter-spacing: 0.5em; text-transform: uppercase; font-weight: 700;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            display: inline-block; border: 1px solid white; box-shadow: 0 15px 45px rgba(0,0,0,0.1);
-            cursor: pointer;
+        /* BLOG IMAGE ALIGNMENT FIX */
+        .blog-image-container {
+            width: 100%;
+            height: 280px; /* EXACT FIXED HEIGHT FOR ALL IMAGES */
+            overflow: hidden;
+            position: relative;
         }
-        .btn-grand-luxury:hover { background-color: var(--gold); color: white; border-color: var(--gold); transform: translateY(-5px); }
+        .blog-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* THIS CROPS THE IMAGE TO FIT THE BOX */
+            object-position: center;
+        }
 
         .blog-card { transition: all 0.4s ease; background: white; border: 1px solid #f2f2f2; height: 100%; display: flex; flex-direction: column; }
         .blog-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.04); }
         .blog-card.hidden { display: none; }
 
+        /* SLIDER */
         .boutique-slide { text-align: center; background: #fff; padding: 30px; border: 1px solid #eee; transition: 0.3s; display: flex; flex-direction: column; }
-        .boutique-slide:hover { border-color: var(--gold); }
         .boutique-slide img { height: 150px; object-fit: contain; margin: 0 auto 20px; }
+
+        .btn-grand-luxury {
+            background-color: white; color: black; padding: 24px 70px; font-size: 13px;
+            letter-spacing: 0.5em; text-transform: uppercase; font-weight: 700;
+            transition: all 0.4s ease; display: inline-block; border: 1px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
@@ -47,7 +58,7 @@
     <!-- HEADER -->
     <header class="bg-white border-b border-gray-100 sticky top-0 z-[100]">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-24">
-            <div class="py-2"><a href="/"><img src="/logo.png" alt="Logo" class="nav-logo"></a></div>
+            <div class="py-2"><a href="/"><img src="https://www.thesillageguide.online/logo.png" alt="Logo" class="nav-logo"></a></div>
             
             <nav class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.2em] font-bold">
                 <a href="/" class="hover:text-gold transition">Boutique</a>
@@ -61,88 +72,77 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-gray-400"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                     <input type="text" id="blogSearch" placeholder="Search Journal..." onkeyup="filterBlogs()">
                 </div>
-                <!-- Mobile Toggle -->
-                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                </button>
-                <a href="/" class="hidden sm:block bg-black text-white px-6 py-3 text-[10px] uppercase font-bold hover:bg-gold transition">Shop Now</a>
+                <a href="https://amzn.to/4egrVbL" target="_blank" class="hidden sm:block bg-black text-white px-6 py-3 text-[10px] uppercase font-bold hover:bg-gold transition">Shop Now</a>
             </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="fixed inset-0 bg-white z-[200] flex flex-col items-center justify-center space-y-8 transition-all duration-500 translate-x-full">
-            <button class="absolute top-8 right-8" onclick="toggleMobileMenu()"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
-            <a href="/" class="text-xl uppercase tracking-widest" onclick="toggleMobileMenu()">Boutique</a>
-            <a href="/disney" class="text-xl uppercase tracking-widest" onclick="toggleMobileMenu()">Disney</a>
-            <a href="/mens" class="text-xl uppercase tracking-widest" onclick="toggleMobileMenu()">Men's</a>
-            <a href="/blog" class="text-xl uppercase tracking-widest" onclick="toggleMobileMenu()">Blog</a>
         </div>
     </header>
 
-    <!-- HERO -->
+    <!-- BLOG HERO -->
     <section class="relative h-[60vh] flex items-end justify-start overflow-hidden">
         <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=2000" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-black/20"></div>
         <div class="relative z-20 pb-20 pl-20 text-white">
             <h1 class="text-4xl md:text-5xl serif italic mb-4">The Sillage Journal</h1>
-            <a href="#articles" class="btn-grand-luxury">Read Articles</a>
+            <a href="#articles" class="text-[11px] uppercase tracking-[0.3em] font-bold border-b border-white pb-2">Read The Latest</a>
         </div>
     </section>
 
     <!-- ARTICLES GRID -->
     <section id="articles" class="py-24 px-6 max-w-7xl mx-auto">
         <div id="noResults" class="hidden text-center py-20 text-gray-400 italic">No matching articles found.</div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16" id="blogGrid">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 items-stretch" id="blogGrid">
             
             <!-- Article 1: Minnie Mouse -->
             <article class="blog-card overflow-hidden">
-                <img src="/minnie-blog-hero.jpg" class="w-full h-64 object-cover" alt="Minnie Mouse">
+                <div class="blog-image-container">
+                    <img src="https://www.thesillageguide.online/minnie-blog-hero.jpg" alt="Minnie Mouse">
+                </div>
                 <div class="p-10 flex flex-col flex-grow">
                     <span class="text-gold text-[9px] font-bold uppercase tracking-widest mb-4">May 2024 • Review</span>
                     <h2 class="text-2xl serif mb-4 blog-title">Minnie Mouse House of Sillage: A Review</h2>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-8 font-light italic">Exploring the whimsical nostalgia and high-end luxury of this iconic Disney collaboration...</p>
-                    <a href="/minnie-mouse-house-of-sillage" class="mt-auto text-[10px] uppercase font-bold border-b border-black pb-1 hover:text-gold transition w-fit">Read Full Story</a>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8 font-light italic">Exploring the whimsical nostalgia and luxury of this iconic Disney collaboration...</p>
+                    <a href="/minnie-mouse-house-of-sillage" class="mt-auto text-[10px] uppercase font-bold border-b border-black pb-1 hover:text-gold transition w-fit">Read Story</a>
                 </div>
             </article>
 
-            <!-- Article 2: Mickey Mouse (UPDATED LINK) -->
+            <!-- Article 2: Mickey Mouse -->
             <article class="blog-card overflow-hidden">
-                <img src="/mickey-blog-hero.jpg" class="w-full h-64 object-cover" alt="Mickey Mouse">
+                <div class="blog-image-container">
+                    <img src="https://www.thesillageguide.online/mickey-blog-hero.jpg" alt="Mickey Mouse">
+                </div>
                 <div class="p-10 flex flex-col flex-grow">
                     <span class="text-gold text-[9px] font-bold uppercase tracking-widest mb-4">May 2024 • Collector's Edition</span>
                     <h2 class="text-2xl serif mb-4 blog-title">House of Sillage Mickey Mouse: Olfactory Tribute</h2>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-8 font-light italic">Discover where childhood wonder meets adult prestige in this citrus and cocoa masterpiece...</p>
-                    <a href="/house-of-sillage-mickey-mouse" class="mt-auto text-[10px] uppercase font-bold border-b border-black pb-1 hover:text-gold transition w-fit">Read Full Story</a>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8 font-light italic">Where childhood wonder meets adult prestige in a citrus and cocoa masterpiece...</p>
+                    <a href="/house-of-sillage-mickey-mouse" class="mt-auto text-[10px] uppercase font-bold border-b border-black pb-1 hover:text-gold transition w-fit">Read Story</a>
+                </div>
+            </article>
+
+            <!-- Article 3: Perfume Reviews (FIXED ALIGNMENT) -->
+            <article class="blog-card overflow-hidden">
+                <div class="blog-image-container">
+                    <img src="https://www.thesillageguide.online/sillage-reviews-hero.jpg" alt="House of Sillage Reviews">
+                </div>
+                <div class="p-10 flex flex-col flex-grow">
+                    <span class="text-gold text-[9px] font-bold uppercase tracking-widest mb-4">May 2024 • Luxury Guide</span>
+                    <h2 class="text-2xl serif mb-4 blog-title">House of Sillage Perfume Reviews: The Guide</h2>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8 font-light italic">An expert journey through signature scents that define high-society elegance...</p>
+                    <a href="/house-of-sillage-perfume-reviews" class="mt-auto text-[10px] uppercase font-bold border-b border-black pb-1 hover:text-gold transition w-fit">Read Story</a>
                 </div>
             </article>
 
         </div>
     </section>
-    <!-- Article 3: House of Sillage Perfume Reviews -->
-            <article class="blog-card overflow-hidden">
-                <!-- FIXED HEIGHT CONTAINER: h-64 ensures it matches Article 1 and 2 -->
-                <div class="h-64 w-full overflow-hidden">
-                    <img src="/sillage-reviews-hero.jpg" class="w-full h-full object-cover" alt="House of Sillage Perfume Reviews">
-                </div>
-                <div class="p-10 flex flex-col flex-grow">
-                    <span class="text-gold text-[9px] font-bold uppercase tracking-widest mb-4">May 2024 • Luxury Guide</span>
-                    <h2 class="text-2xl serif mb-4 blog-title">House of Sillage Perfume Reviews: The Ultimate Guide</h2>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-8 font-light italic">An expert journey through the world's most opulent fragrance house, exploring signature scents that define high-society elegance...</p>
-                    <a href="/house-of-sillage-perfume-reviews" class="mt-auto text-[10px] uppercase font-bold border-b border-black pb-1 hover:text-gold transition w-fit">Read Full Story</a>
-                </div>
-            </article>
 
     <!-- BOUTIQUE SLIDER -->
     <section class="py-24 bg-zinc-50 border-t">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-3xl serif italic mb-12">Shop The Signature Collection</h2>
+            <h2 class="text-3xl serif italic mb-12">Signature Masterpieces Gallery</h2>
             <div class="swiper boutiqueSwiper">
                 <div class="swiper-wrapper">
-                    <!-- Home Page Products -->
                     <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61ECqTv30WL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Whispers of Abundance</h4></a>
                     <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61Iz40fik4L._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Whispers of Truth</h4></a>
                     <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61CgSjNBAhL._AC_SX679_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Hauts Bijoux</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61l0zhc6QpL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Passion de L'Amour</h4></a>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -151,14 +151,14 @@
 
     <!-- FOOTER -->
     <footer class="bg-white border-t border-gray-100 py-16 text-center opacity-40">
-        <img src="/logo.png" alt="Logo" class="h-12 mx-auto mb-6 grayscale">
+        <img src="https://www.thesillageguide.online/logo.png" alt="Logo" class="h-12 mx-auto mb-6 grayscale">
         <p class="text-[9px] uppercase tracking-widest">© 2024 thesillageguide.online</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         new Swiper(".boutiqueSwiper", { slidesPerView: 1, spaceBetween: 20, loop: true, autoplay: { delay: 4000 }, pagination: { el: ".swiper-pagination", clickable: true }, breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 4 } } });
-        function toggleMobileMenu() { const menu = document.getElementById('mobileMenu'); menu.classList.toggle('translate-x-full'); menu.classList.toggle('translate-x-0'); }
+        
         function filterBlogs() {
             let input = document.getElementById('blogSearch').value.toLowerCase();
             let cards = document.getElementsByClassName('blog-card');
