@@ -4,32 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO META TAGS -->
-    <title>House of Sillage Mickey Mouse: A Luxury Olfactory Tribute</title>
-    <meta name="description" content="Discover the House of Sillage Mickey Mouse fragrance. A deep dive into the citrus and cocoa scent notes, the iconic Swarovski ear cap, and why this Disney collector's item is a must-have.">
+    <title>House of Sillage Mickey Mouse: A Luxury Olfactory Tribute | The Sillage Guide</title>
+    <meta name="description" content="Discover the House of Sillage Mickey Mouse fragrance. A deep dive into the citrus and cocoa scent notes, the iconic Swarovski ear cap, and luxury design.">
     <link rel="canonical" href="https://www.thesillageguide.online/house-of-sillage-mickey-mouse" />
     
     <link rel="icon" type="image/png" href="/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
     
+    <!-- SWIPER CSS (Required for Slider) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
     <style>
-        :root { --gold: #c5a059; --dark: #1a1a1a; --off-white: #fdfdfd; --disney-red: #da291c; }
-        body { font-family: 'Montserrat', sans-serif; line-height: 1.8; color: #444; background-color: #fff; }
+        :root { --gold: #c5a059; --dark: #1a1a1a; --off-white: #fdfdfd; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.8; color: #444; background-color: var(--off-white); overflow-x: hidden; }
         h1, h2, h3, .serif { font-family: 'Playfair Display', serif; color: var(--dark); }
-        .nav-logo { height: 80px; width: auto; }
+        .nav-logo { height: 100px; width: auto; transition: 0.3s; }
+        
         .content-area p { margin-bottom: 30px; font-size: 17px; font-weight: 300; text-align: justify; }
         .content-area h2 { font-size: 32px; margin-top: 50px; margin-bottom: 20px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }
         .accent-box { border-left: 4px solid var(--gold); padding: 20px 40px; background: #fafafa; margin: 40px 0; font-style: italic; }
-        .internal-link { color: var(--gold); font-weight: 600; border-bottom: 1px solid var(--gold); transition: 0.3s; }
-        .internal-link:hover { background: var(--gold); color: white; }
+
+        /* Slider Styles */
+        .boutique-slide { text-align: center; background: #fff; padding: 20px; border: 1px solid #eee; transition: 0.3s; display: flex; flex-direction: column; height: auto; }
+        .boutique-slide img { height: 150px; object-fit: contain; margin: 0 auto 15px; }
+
+        /* GRAND LUXURY BUTTON */
+        .btn-grand-luxury {
+            background-color: white; color: black; padding: 24px 70px; font-size: 13px;
+            letter-spacing: 0.5em; text-transform: uppercase; font-weight: 700;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: inline-block; border: 1px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .btn-grand-luxury:hover { background-color: var(--gold); color: white; border-color: var(--gold); transform: translateY(-5px); }
     </style>
 </head>
 <body>
 
     <!-- NAVIGATION HEADER -->
     <header class="bg-white border-b border-gray-100 sticky top-0 z-[100]">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
-            <div class="py-2"><a href="/"><img src="/logo.png" alt="The Sillage Guide" class="nav-logo"></a></div>
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-24">
+            <div class="py-2"><a href="/"><img src="/logo.png" alt="Logo" class="nav-logo"></a></div>
             <nav class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.2em] font-bold">
                 <a href="/" class="hover:text-gold transition">Boutique</a>
                 <a href="/disney" class="hover:text-gold transition">Disney</a>
@@ -37,65 +52,64 @@
                 <a href="/blog" class="text-gold">Blog</a>
                 <a href="/contact" class="hover:text-gold transition">Contact</a>
             </nav>
-            <a href="https://amzn.to/4egrVbL" target="_blank" class="text-[10px] font-bold uppercase tracking-widest border-b border-black">Explore Boutique</a>
+            <a href="https://amzn.to/4egrVbL" target="_blank" class="bg-black text-white px-6 py-3 text-[10px] uppercase tracking-widest font-bold hover:bg-gold transition">Shop Now</a>
         </div>
     </header>
 
+    <!-- ARTICLE HERO -->
+    <section class="relative h-[85vh] flex items-end justify-start overflow-hidden">
+        <img src="/mickey-blog-hero.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Mickey Mouse Review Hero">
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="relative z-20 pb-24 pl-20">
+            <a href="#article" class="btn-grand-luxury">Explore the Legacy</a>
+        </div>
+    </section>
+
     <!-- ARTICLE CONTENT -->
-    <article class="max-w-4xl mx-auto py-20 px-6">
+    <article id="article" class="max-w-4xl mx-auto py-24 px-6">
         <header class="text-center mb-16">
-            <span class="text-gold text-[10px] font-bold uppercase tracking-[0.4em] block mb-4">The Sillage Journal Feature</span>
-            <h1 class="text-4xl md:text-6xl serif italic mb-8 leading-tight">Mastering Luxury: The House of Sillage Mickey Mouse Parfum</h1>
+            <span class="text-gold text-[10px] font-bold uppercase tracking-[0.5em] block mb-4">Collector's Feature</span>
+            <h1 class="text-4xl md:text-6xl serif italic mb-8 leading-tight">House of Sillage Mickey Mouse: A Luxury Olfactory Tribute</h1>
             <div class="flex justify-center items-center space-x-4 opacity-50 text-[10px] uppercase tracking-widest">
-                <span>May 03, 2024</span>
+                <span>May 04, 2024</span>
                 <span>•</span>
-                <span>By The Sillage Guide Editorial Team</span>
+                <span>The Sillage Journal Editorial</span>
             </div>
         </header>
-
-        <!-- CUSTOM IMAGE PLACEHOLDER (Use the one you create in Canva) -->
-        <img src="/mickey-blog-hero.jpg" class="w-full h-auto mb-16 shadow-2xl rounded-sm" alt="House of Sillage Mickey Mouse Collector's Edition">
 
         <div class="content-area">
             <p>In the expansive universe of haute parfumerie, few characters hold as much emotional resonance as Mickey Mouse. When this global icon met the opulence of Californian luxury, the <strong>House of Sillage Mickey Mouse</strong> parfum was born. This collaboration is not just a nod to pop culture; it is a sophisticated, high-end olfactory experience that has redefined what a "Disney fragrance" can be. For the serious collector, it represents a bridge between childhood wonder and adult prestige.</p>
 
-            <h2>The Fragrance Journey: Citrus Spark Meets Velvety Warmth</h2>
-            <p>The brilliance of the <strong>House of Sillage Mickey Mouse</strong> scent lies in its unexpected complexity. While one might expect a simple sugary profile, the master perfumers behind this creation have opted for a multi-layered journey that evolves dramatically on the skin.</p>
-            
-            <p>The experience opens with a bright, energetic overture of <strong>bergamot and mandarin</strong>. These citrus notes are sharpened by a subtle kick of <strong>cardamom</strong>, providing an immediate sense of "citrus spark." As the initial notes settle, the heart reveals a creamy, exotic core of <strong>orange blossom, coconut milk, and cocoa</strong>. This is the stage where the fragrance becomes addictive—it is gourmand without being cloying, and floral without being feminine.</p>
+            <!-- PRODUCT IMAGE WITH AFFILIATE LINK -->
+            <div class="my-16 text-center">
+                <a href="https://amzn.to/493OM6W" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/61l4NdSsTqL._AC_SL1000_.jpg" class="w-full h-[500px] object-contain mx-auto transition-transform hover:scale-105" alt="Mickey Mouse Bottle">
+                </a>
+                <p class="text-[9px] uppercase tracking-widest mt-4 text-gray-400 italic">Click image to view on Amazon</p>
+            </div>
+
+            <h2>The Fragrance Journey: Citrus Spark Meets Warmth</h2>
+            <p>The brilliance of the <strong>House of Sillage Mickey Mouse</strong> scent lies in its unexpected complexity. While one might expect a simple profile, the master perfumers behind this creation have opted for a multi-layered journey that evolves beautifully on the skin. The experience opens with a bright, energetic overture of bergamot and mandarin. These citrus notes are sharpened by a subtle kick of cardamom, providing an immediate sense of "citrus spark." As the initial notes settle, the heart reveals a creamy, exotic core of orange blossom, coconut milk, and cocoa. This is the stage where the fragrance becomes addictive—it is gourmand without being cloying. The dry down is where this parfum truly earns its status. A foundation of amber, sandalwood, tonka bean, and vanilla wraps around the wearer in a smooth, velvety warmth.</p>
 
             <div class="accent-box text-xl">
-                "The House of Sillage Mickey Mouse fragrance is a testament to the fact that magic can be sophisticated, and luxury can be found in the most nostalgic of places."
+                "Where citrus spark meets creamy warmth—a heartfelt tribute to romance, nostalgia, and enchanting moments."
             </div>
 
-            <p>The dry down is where this parfum truly earns its status. A foundation of <strong>amber, sandalwood, tonka bean, and vanilla</strong> wraps around the wearer in a smooth, velvety warmth. The longevity is exceptional, making it a perfect choice for those who desire a signature scent that lingers elegantly throughout the evening.</p>
+            <h2>Artistic Presentation: Swarovski Brilliance</h2>
+            <p>No <strong>House of Sillage Mickey Mouse</strong> review is complete without discussing the vessel. The "cupcake" silhouette is finished in a deep, strawberry-red lacquer that radiates sophistication. However, the true showstopper is the cap. The world-famous Mickey Mouse ears are beautifully reimagined in yellow gold plating, meticulously hand-set with Swarovski crystals in Mickey's classic red and black hues. It takes master artisans over 10 hours to hand-polish and stone-set a single bottle. This dedication to detail transforms the fragrance into a piece of fine sculpture—a genuine objet d'art that deserves a central place on any luxury vanity.</p>
 
-            <h2>Artistic Presentation: Iconic Ears and Swarovski Brilliance</h2>
-            <p>No <strong>House of Sillage Mickey Mouse</strong> review is complete without discussing the vessel. The "cupcake" silhouette is finished in a deep, strawberry-red lacquer that radiates sophistication. However, the true showstopper is the cap. The world-famous Mickey Mouse ears are beautifully reimagined in yellow gold plating, meticulously hand-set with **Swarovski crystals** in Mickey's classic red and black hues.</p>
-            
-            <p>It takes master artisans over 10 hours to hand-polish and stone-set a single bottle. This dedication to detail transforms the fragrance into a piece of fine sculpture—a genuine objet d'art that deserves a central place on any luxury vanity. If you have already explored the <a href="/minnie-mouse-house-of-sillage" class="internal-link">Minnie Mouse House of Sillage</a> collection, you will find that these two pieces together form the ultimate display of romantic luxury.</p>
+            <h2>A Collector's Legacy</h2>
+            <p>The House of Sillage Mickey Mouse collection serves as a talisman of truth and transformation. It reminds us that our earliest dreams and our most current successes can coexist. This is not simply a perfume; it is a companion for those who chase more than just moments—those who desire a tangible connection to a legacy of joy and craftsmanship. Whether you are adding this to your existing Disney collection or making it your very first niche purchase, the value lies in the rarity of the oils and the prestige of the design. It is a fragrance destined to be as legendary as the adventures it was inspired by.</p>
 
-            <h2>A Collector's Legacy: Why It Matters</h2>
-            <p>The **House of Sillage Mickey Mouse** collection serves as a talisman of truth and transformation. It reminds us that our earliest dreams and our most current successes can coexist. This is not simply a perfume; it is a companion for those who chase more than just moments—those who desire a tangible connection to a legacy of joy and craftsmanship.</p>
-            
-            <p>Whether you are adding this to your existing <a href="/disney" class="internal-link">Disney x House of Sillage</a> collection or making it your very first niche purchase, the value lies in the rarity of the oils and the prestige of the design. It is a fragrance destined to be as legendary as the adventures it was inspired by.</p>
-
-            <h2>Final Recommendation</h2>
-            <p>The **House of Sillage Mickey Mouse** parfum is designed for the man or woman who values uniqueness and distinction. It is a unisex masterpiece that leans into warmth and charisma. In a world of mass-produced scents, this stands apart as a rare expression of beauty and ultra-luxury.</p>
-        </div>
-
-        <!-- AFFILIATE CTA -->
-        <div class="mt-20 p-12 bg-zinc-50 text-center rounded-xl border border-gray-100">
-            <h3 class="serif italic text-3xl mb-4">Experience the Legacy</h3>
-            <p class="text-sm text-gray-500 uppercase tracking-[0.2em] mb-10">Shop the official Mickey Mouse Parfum on Amazon</p>
-            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-                <a href="https://amzn.to/493OM6W" target="_blank" class="bg-black text-white px-10 py-5 text-[11px] uppercase font-bold tracking-widest hover:bg-gold transition shadow-xl">Shop The Mickey Parfum</a>
-                <a href="/disney" class="border border-black text-black px-10 py-5 text-[11px] uppercase font-bold tracking-widest hover:bg-black hover:text-white transition shadow-xl">Full Disney Collection</a>
+            <div class="text-center py-24 bg-zinc-900 text-white rounded-sm mt-20">
+                <h2 class="text-4xl serif italic mb-8 text-white">Final Verdict</h2>
+                <p class="max-w-3xl mx-auto text-sm px-10 leading-loose opacity-80 mb-12">The House of Sillage Mickey Mouse parfum is designed for the individual who values uniqueness and distinction. It is a unisex masterpiece that leans into warmth and charisma. In a world of mass-produced scents, this stands apart as a rare expression of beauty and ultra-luxury.</p>
+                <a href="https://amzn.to/493OM6W" target="_blank" class="btn-grand-luxury">Acquire on Amazon</a>
             </div>
         </div>
-
     </article>
-     <!-- BOUTIQUE SLIDER -->
+
+    <!-- BOUTIQUE SLIDER -->
     <section class="py-24 bg-zinc-50 border-t">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <span class="text-gold text-[10px] font-bold uppercase tracking-[0.4em] block mb-4">Signature Pieces</span>
@@ -119,20 +133,20 @@
         </div>
     </section>
 
-    <!-- COMMENT & REVIEW SECTION (PLACEMENT: BEFORE FOOTER) -->
+    <!-- COMMENT & REVIEW SECTION -->
     <section class="max-w-4xl mx-auto py-24 px-6 border-t border-gray-100">
         <div class="text-center mb-12">
             <span class="text-gold text-[10px] font-bold uppercase tracking-[0.4em] block mb-2">Community</span>
             <h3 class="serif italic text-3xl">Collector Reviews & Inquiries</h3>
         </div>
         
-        <!-- Cusdis Widget -->
+        <!-- Cusdis Widget (Unique for Mickey) -->
         <div id="cusdis_thread"
           data-host="https://cusdis.com"
           data-app-id="c4e30ff0-b60a-476d-b21a-eb7fead90b08"
-          data-page-id="minnie-mouse-review"
-          data-page-url="https://www.thesillageguide.online/minnie-mouse-house-of-sillage"
-          data-page-title="Minnie Mouse House of Sillage Review">
+          data-page-id="mickey-mouse-review"
+          data-page-url="https://www.thesillageguide.online/house-of-sillage-mickey-mouse"
+          data-page-title="House of Sillage Mickey Mouse Review">
         </div>
         <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
     </section>
@@ -141,25 +155,20 @@
     <footer class="bg-white border-t border-gray-100 py-16 px-6 text-center">
         <img src="/logo.png" alt="Logo" class="h-12 mx-auto mb-8 grayscale opacity-30">
         <div class="max-w-3xl mx-auto">
-            <p class="text-[10px] text-gray-400 leading-relaxed uppercase tracking-widest">
+            <p class="text-[10px] text-gray-400 leading-relaxed uppercase tracking-widest text-center">
                 <strong>Affiliate Disclosure:</strong> As an Amazon Associate, The Sillage Guide earns from qualifying purchases made through the links in this article. We provide independent reviews to help you navigate the world of luxury scents. All trademarks are property of their respective owners.
             </p>
         </div>
     </footer>
 
-    <!-- SCRIPTS (Required for Slider Functionality) -->
+    <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         new Swiper(".boutiqueSwiper", { 
-            slidesPerView: 1, 
-            spaceBetween: 20, 
-            loop: true, 
+            slidesPerView: 1, spaceBetween: 20, loop: true, 
             autoplay: { delay: 4000, disableOnInteraction: false },
             pagination: { el: ".swiper-pagination", clickable: true }, 
-            breakpoints: { 
-                640: { slidesPerView: 2 }, 
-                1024: { slidesPerView: 4 } 
-            } 
+            breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 4 } } 
         });
     </script>
 
