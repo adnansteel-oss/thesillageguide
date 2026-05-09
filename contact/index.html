@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | The Sillage Guide | Haute Parfumerie Boutique</title>
+    <meta name="description" content="Get in touch with The Sillage Guide. For inquiries regarding House of Sillage reviews, collaborations, or luxury fragrance advice.">
+    
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --gold: #c5a059; --dark: #1a1a1a; --off-white: #fdfdfd; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--off-white); color: var(--dark); scroll-behavior: smooth; overflow-x: hidden; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; color: var(--dark); }
+        .nav-logo { height: 100px; width: auto; transition: 0.3s; }
+
+        /* GRAND LUXURY BUTTON */
+        .btn-grand-luxury {
+            background-color: white; color: black; padding: 24px 70px; font-size: 13px;
+            letter-spacing: 0.5em; text-transform: uppercase; font-weight: 700;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: inline-block; border: 1px solid white; box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        .btn-grand-luxury:hover { background-color: var(--gold); color: white; border-color: var(--gold); transform: translateY(-5px); }
+
+        .contact-input {
+            width: 100%; border: none; border-bottom: 1px solid #eee; padding: 15px 0;
+            font-family: 'Montserrat', sans-serif; font-size: 12px; text-transform: uppercase;
+            letter-spacing: 0.1em; outline: none; transition: 0.3s; background: transparent;
+        }
+        .contact-input:focus { border-color: var(--gold); }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-[100]">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-24">
+            <div class="py-2"><a href="/"><img src="/logo.png" alt="The Sillage Guide" class="nav-logo"></a></div>
+            
+            <nav class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.2em] font-bold">
+                <a href="/" class="hover:text-gold transition">Boutique</a>
+                <a href="/disney" class="hover:text-gold transition">Disney</a>
+                <a href="/mens" class="hover:text-gold transition">Men's</a>
+                <a href="/blog" class="hover:text-gold transition">Blog</a>
+                <a href="/contact" class="text-gold">Contact</a>
+            </nav>
+
+            <a href="https://amzn.to/4egrVbL" target="_blank" class="bg-black text-white px-6 py-3 text-[10px] uppercase font-bold hover:bg-gold transition">Shop Now</a>
+        </div>
+    </header>
+
+    <!-- CONTACT HERO -->
+    <section class="relative h-[60vh] flex items-end justify-start overflow-hidden">
+        <img src="/contact-hero.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Contact The Sillage Guide">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-20 pb-20 pl-20 text-white">
+            <span class="uppercase tracking-[0.5em] text-[10px] mb-4 block">Personalized Concierge</span>
+            <h1 class="text-4xl md:text-6xl serif italic mb-8 drop-shadow-md">Get In Touch</h1>
+            <button onclick="document.getElementById('contact-section').scrollIntoView();" class="btn-grand-luxury">Send Message</button>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact-section" class="py-32 px-6 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+            
+            <!-- Left Side: Copy -->
+            <div class="space-y-10">
+                <div>
+                    <h2 class="text-4xl mb-6">The Sillage Concierge</h2>
+                    <div class="w-12 h-[1px] bg-gold mb-8"></div>
+                    <p class="text-gray-500 font-light leading-relaxed italic">
+                        Whether you are seeking advice on choosing your first House of Sillage masterpiece, have a question regarding a specific limited edition collaboration, or simply wish to share your olfactory journey, we invite you to reach out. Our editorial team is dedicated to providing the most detailed insights into the world of luxury fragrance.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-[10px] uppercase font-bold tracking-[0.3em] text-gold">Direct Inquiry</h4>
+                    <a href="mailto:thesillageguide@proton.me" class="text-xl serif border-b border-black pb-2 hover:text-gold hover:border-gold transition">thesillageguide@proton.me</a>
+                </div>
+
+                <div class="pt-10">
+                    <p class="text-[9px] uppercase tracking-widest text-gray-400">Response Time</p>
+                    <p class="text-sm font-light">Within 24-48 hours</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Form -->
+            <form action="https://formspree.io/f/YOUR_ID" method="POST" class="space-y-8 bg-white p-12 shadow-2xl border border-gray-50">
+                <div class="space-y-2">
+                    <label class="text-[9px] uppercase font-bold tracking-widest text-gray-400">Your Full Name</label>
+                    <input type="text" name="name" class="contact-input" placeholder="Enter Name" required>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[9px] uppercase font-bold tracking-widest text-gray-400">Email Address</label>
+                    <input type="email" name="email" class="contact-input" placeholder="Enter Email" required>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[9px] uppercase font-bold tracking-widest text-gray-400">Subject</label>
+                    <input type="text" name="subject" class="contact-input" placeholder="Regarding...">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[9px] uppercase font-bold tracking-widest text-gray-400">Message</label>
+                    <textarea name="message" rows="4" class="contact-input" placeholder="How can we assist you?" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-black text-white py-5 uppercase text-[10px] font-bold tracking-[0.3em] hover:bg-gold transition">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-gray-100 py-20 px-6 text-center">
+        <img src="/logo.png" alt="Logo" class="h-12 mx-auto mb-10 grayscale opacity-30">
+        <div class="max-w-3xl mx-auto space-y-6">
+            <nav class="flex justify-center space-x-8 text-[9px] uppercase font-bold tracking-widest mb-10">
+                <a href="/" class="hover:text-gold">Home</a>
+                <a href="/disney" class="hover:text-gold">Disney</a>
+                <a href="/mens" class="hover:text-gold">Men's</a>
+                <a href="/blog" class="hover:text-gold">Blog</a>
+            </nav>
+            <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-relaxed">
+                As an Amazon Associate, The Sillage Guide earns from qualifying purchases. All inquiries are strictly confidential.
+            </p>
+            <p class="text-[9px] text-gray-300">© 2024 thesillageguide.online | Private & Confidential</p>
+        </div>
+    </footer>
+
+</body>
+</html>
