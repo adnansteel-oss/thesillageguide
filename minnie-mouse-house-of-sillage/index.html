@@ -12,14 +12,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
     
+    <!-- SWIPER CSS (Required for Slider) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
     <style>
         :root { --gold: #c5a059; --dark: #1a1a1a; --off-white: #fdfdfd; --disney-red: #da291c; }
-        body { font-family: 'Montserrat', sans-serif; line-height: 1.8; color: #444; background-color: #fff; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.8; color: #444; background-color: #fff; overflow-x: hidden; }
         h1, h2, h3, .serif { font-family: 'Playfair Display', serif; color: var(--dark); }
-        .nav-logo { height: 80px; width: auto; }
+        .nav-logo { height: 100px; width: auto; transition: 0.3s; }
         .content-area p { margin-bottom: 30px; font-size: 17px; font-weight: 300; text-align: justify; }
         .content-area h2 { font-size: 32px; margin-top: 50px; margin-bottom: 20px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }
         .accent-box { border-left: 4px solid var(--disney-red); padding: 20px 40px; background: #fffcfc; margin: 40px 0; font-style: italic; }
+
+        /* Slider Styles */
+        .boutique-slide { text-align: center; background: #fff; padding: 20px; border: 1px solid #eee; transition: 0.3s; display: flex; flex-direction: column; height: auto; }
+        .boutique-slide img { height: 150px; object-fit: contain; margin: 0 auto 15px; }
     </style>
 </head>
 <body>
@@ -35,7 +42,7 @@
                 <a href="/blog" class="text-gold">Blog</a>
                 <a href="/contact" class="hover:text-gold transition">Contact</a>
             </nav>
-            <a href="https://amzn.to/4egrVbL" target="_blank" class="bg-black text-white px-6 py-3 text-[10px] uppercase tracking-widest font-bold hover:bg-gold transition">Explore Boutique</a>
+            <a href="https://amzn.to/4egrVbL" target="_blank" class="bg-black text-white px-6 py-3 text-[10px] uppercase tracking-widest font-bold hover:bg-gold transition">Shop Now</a>
         </div>
     </header>
 
@@ -47,7 +54,7 @@
             <div class="flex justify-center items-center space-x-4 opacity-50 text-[10px] uppercase tracking-widest">
                 <span>May 03, 2024</span>
                 <span>•</span>
-                <span>By The Sillage Guide Editorial Team</span>
+                <span>The Sillage Journal Editorial</span>
             </div>
         </header>
 
@@ -76,7 +83,8 @@
 
             <h2>Is the Minnie Mouse House of Sillage Worth It?</h2>
             <p>If you are a collector of rare items or a lover of high-concept perfumery, the answer is a resounding yes. The <strong>Minnie Mouse House of Sillage</strong> collection offers a unique value proposition: it combines the world's most recognized character with the world's most meticulous perfume craftsmanship. It is an investment in art, memory, and an unforgettable olfactory signature.</p>
-             <p>While the Minnie Mouse collection is a masterpiece of feminine elegance, those looking for a more masculine or industrial aesthetic should explore the 
+             
+            <p>While the Minnie Mouse collection is a masterpiece of feminine elegance, those looking for a more masculine or industrial aesthetic should explore the 
             <a href="/mens" class="text-gold font-bold hover:underline">House of Sillage Men's Suite</a>, featuring bold collaborations like the Batman 85th Anniversary parfum.</p>
         </div>
 
@@ -90,28 +98,30 @@
             </div>
         </div>
     </article>
-    <!-- BOUTIQUE SLIDER (INCLUDES ALL 9 HOME PRODUCTS) -->
+
+    <!-- BOUTIQUE SLIDER -->
     <section class="py-24 bg-zinc-50 border-t">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <span class="text-gold text-[10px] uppercase tracking-[0.4em] mb-4 block font-bold">The Sillage Boutique</span>
-            <h2 class="text-3xl serif italic mb-12">Signature Masterpieces Gallery</h2>
+            <span class="text-gold text-[10px] font-bold uppercase tracking-[0.4em] block mb-4">Signature Pieces</span>
+            <h2 class="text-3xl serif italic mb-12">The Collector's Gallery</h2>
             
             <div class="swiper boutiqueSwiper">
                 <div class="swiper-wrapper">
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61ECqTv30WL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Abundance</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61Iz40fik4L._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Truth</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61CgSjNBAhL._AC_SX679_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Bijoux</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61l0zhc6QpL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Passion</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/610IISRi+AL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Pink Panther</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/618RFeJRMRL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Wonder Woman</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/618oAj451FL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Slytherin</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61y3uAi6WXL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Gryffindor</h4></a>
-                    <a href="/" class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/619uKzBkyfL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Hufflepuff</h4></a>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61ECqTv30WL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Abundance</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61Iz40fik4L._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Truth</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61CgSjNBAhL._AC_SX679_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Bijoux</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61l0zhc6QpL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Passion</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/610IISRi+AL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Pink Panther</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/618RFeJRMRL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Wonder Woman</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/618oAj451FL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Slytherin</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61y3uAi6WXL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Gryffindor</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/619uKzBkyfL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Hufflepuff</h4></div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
             <a href="/" class="mt-12 inline-block border-b border-black pb-1 text-[9px] uppercase font-bold tracking-[0.2em] hover:text-gold transition">Back to Main Boutique</a>
         </div>
+    </section>
 
     <!-- COMMENT & REVIEW SECTION (PLACEMENT: BEFORE FOOTER) -->
     <section class="max-w-4xl mx-auto py-24 px-6 border-t border-gray-100">
@@ -140,6 +150,22 @@
             </p>
         </div>
     </footer>
+
+    <!-- SCRIPTS (Required for Slider Functionality) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        new Swiper(".boutiqueSwiper", { 
+            slidesPerView: 1, 
+            spaceBetween: 20, 
+            loop: true, 
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: { el: ".swiper-pagination", clickable: true }, 
+            breakpoints: { 
+                640: { slidesPerView: 2 }, 
+                1024: { slidesPerView: 4 } 
+            } 
+        });
+    </script>
 
 </body>
 </html>
