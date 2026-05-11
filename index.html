@@ -319,42 +319,49 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+   <!-- FOOTER & AFFILIATE DISCLOSURE -->
     <footer class="bg-white border-t border-gray-100 py-24 px-6">
         <div class="max-w-7xl mx-auto flex flex-col items-center">
-            <img src="logo.png" alt="Logo" class="h-16 w-auto grayscale opacity-40 mb-12">
+            <!-- Grayscale Logo -->
+            <img src="/logo.png" alt="Logo" class="h-16 w-auto grayscale opacity-40 mb-12">
+            
             <div class="text-center space-y-10 max-w-4xl pt-10 border-t border-gray-50">
-                <div class="bg-zinc-50 p-10 rounded-lg text-[11px] text-gray-400 leading-relaxed uppercase tracking-widest text-center">
-                    Affiliate Disclosure: This independent boutique, The Sillage Guide, is an official affiliate showcase for House of Sillage. As an Amazon Associate, we earn from qualifying purchases.
+                <p class="text-[11px] uppercase tracking-[0.4em] font-bold text-gold">The Sillage Guide Boutique</p>
+                
+                <!-- PROFESSIONAL AFFILIATE DISCLOSURE BOX -->
+                <div class="bg-zinc-50 p-10 rounded-lg">
+                    <p class="text-[11px] text-gray-400 leading-relaxed uppercase tracking-widest text-center">
+                        <strong>Affiliate Disclosure:</strong> <br><br>
+                        This independent digital boutique, <em>The Sillage Guide</em>, is an official affiliate showcase for House of Sillage. As an Amazon Associate, we earn a commission from qualifying purchases made through the links provided on this platform. If you click on a product and finalize a purchase on Amazon, we may receive a small percentage of the sale at no additional cost to you. These earnings allow us to maintain this high-end curation and provide detailed insights into the craftsmanship of haute parfumerie. All product imagery, logos, and trademarks remain the sole property of House of Sillage.
+                    </p>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-[9px] uppercase tracking-widest pt-10 border-t border-gray-100">
-                    <div class="flex flex-col space-y-2 text-left">
-                        <span class="font-bold text-dark">Collections</span>
-                        <a href="/" class="text-gray-400 hover:text-gold">Boutique</a>
-                        <a href="/disney" class="text-gray-400 hover:text-gold">Disney</a>
-                        <a href="/mens" class="text-gray-400 hover:text-gold">Men's</a>
+
+                <!-- 4-COLUMN FOOTER MENU -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-[10px] uppercase tracking-widest pt-10 border-t border-gray-100 text-left">
+                    <div class="flex flex-col space-y-3">
+                        <span class="font-bold text-dark border-b border-gray-100 pb-2">Collections</span>
+                        <a href="/" class="text-gray-400 hover:text-gold transition">Signature Boutique</a>
+                        <a href="/disney" class="text-gray-400 hover:text-gold transition">Disney x HOS</a>
+                        <a href="/mens" class="text-gray-400 hover:text-gold transition">Men's Suite</a>
+                    </div>
+                    <div class="flex flex-col space-y-3">
+                        <span class="font-bold text-dark border-b border-gray-100 pb-2">Cosmetics</span>
+                        <a href="/#lipsticks" class="text-gray-400 hover:text-gold transition">Lipstick Cases</a>
+                        <a href="/disney#beauty" class="text-gray-400 hover:text-gold transition">Disney Beauty</a>
+                    </div>
+                    <div class="flex flex-col space-y-3">
+                        <span class="font-bold text-dark border-b border-gray-100 pb-2">Company</span>
+                        <a href="/blog" class="text-gray-400 hover:text-gold transition">The Journal</a>
+                        <a href="/contact" class="text-gray-400 hover:text-gold transition">Contact Us</a>
+                    </div>
+                    <div class="flex flex-col space-y-3">
+                        <span class="font-bold text-dark border-b border-gray-100 pb-2">Support</span>
+                        <a href="https://amzn.to/4egrVbL" target="_blank" class="text-gray-400 hover:text-gold transition">Amazon Boutique</a>
+                        <a href="/" class="text-gray-400 hover:text-gold transition">Sitemap</a>
                     </div>
                 </div>
-                <p class="text-[9px] text-gray-300">© 2024 thesillageguide.online | All Rights Reserved.</p>
+                
+                <p class="text-[9px] text-gray-300 pt-10">© 2024 thesillageguide.online | All Rights Reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        new Swiper(".mainSlider", { loop: true, effect: "fade", speed: 1800, autoplay: { delay: 6000, disableOnInteraction: false }, pagination: { el: ".swiper-pagination", clickable: true } });
-        function filterProducts() {
-            let input = document.getElementById('productSearch').value.toLowerCase();
-            let cards = document.getElementsByClassName('product-card');
-            for (let i = 0; i < cards.length; i++) {
-                let title = cards[i].querySelector('.product-title').innerText.toLowerCase();
-                cards[i].classList.toggle('hidden', !title.includes(input));
-            }
-        }
-        function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('translate-x-full');
-            document.getElementById('mobileMenu').classList.toggle('translate-x-0');
-        }
-    </script>
-</body>
-</html>
