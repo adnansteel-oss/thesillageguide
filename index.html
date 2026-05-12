@@ -9,7 +9,7 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V4YSPS2YSD"></script>
     <meta name="msvalidate.01" content="AFBBEA208CEE12ED1388D5D39536061A" />
-    <script type="application/ld+json">
+   <script type="application/ld+json">
 {
   "@context": "https://schema.org/",
   "@type": "ItemList",
@@ -39,7 +39,9 @@
           "hasMerchantReturnPolicy": {
             "@type": "MerchantReturnPolicy",
             "applicableCountry": "US",
-            "returnPolicyCategory": "https://schema.org/UnspecifiedReturnPolicy"
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 30,
+            "returnMethod": "https://schema.org/ReturnByMail"
           },
           "shippingDetails": {
             "@type": "OfferShippingDetails",
@@ -47,6 +49,25 @@
               "@type": "MonetaryAmount",
               "value": "0.00",
               "currency": "USD"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "US"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 0,
+                "maxValue": 1,
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 1,
+                "maxValue": 5,
+                "unitCode": "DAY"
+              }
             }
           }
         },
@@ -81,7 +102,9 @@
           "hasMerchantReturnPolicy": {
             "@type": "MerchantReturnPolicy",
             "applicableCountry": "US",
-            "returnPolicyCategory": "https://schema.org/UnspecifiedReturnPolicy"
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 30,
+            "returnMethod": "https://schema.org/ReturnByMail"
           },
           "shippingDetails": {
             "@type": "OfferShippingDetails",
@@ -89,6 +112,25 @@
               "@type": "MonetaryAmount",
               "value": "0.00",
               "currency": "USD"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "US"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 0,
+                "maxValue": 1,
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 1,
+                "maxValue": 5,
+                "unitCode": "DAY"
+              }
             }
           }
         },
