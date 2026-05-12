@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org/",
   "@type": "ItemList",
@@ -15,11 +15,8 @@
         "@type": "Product",
         "name": "Minnie Mouse Parfum",
         "image": "https://m.media-amazon.com/images/I/61Vsfc8Al+L._AC_SL1000_.jpg",
-        "description": "A whimsical luxury fragrance featuring marshmallow, raspberry, and caramel in a red Swarovski-encrusted bottle.",
-        "brand": {
-          "@type": "Brand",
-          "name": "House of Sillage"
-        },
+        "description": "A whimsical luxury fragrance featuring marshmallow and raspberry in a red Swarovski-encrusted bottle.",
+        "brand": { "@type": "Brand", "name": "House of Sillage" },
         "sku": "HOS-DIS-MINNIE",
         "offers": {
           "@type": "Offer",
@@ -32,14 +29,19 @@
           "hasMerchantReturnPolicy": {
             "@type": "MerchantReturnPolicy",
             "applicableCountry": "US",
-            "returnPolicyCategory": "https://schema.org/UnspecifiedReturnPolicy"
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 30,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
           },
           "shippingDetails": {
             "@type": "OfferShippingDetails",
-            "shippingRate": {
-              "@type": "MonetaryAmount",
-              "value": "0.00",
-              "currency": "USD"
+            "shippingRate": { "@type": "MonetaryAmount", "value": "0.00", "currency": "USD" },
+            "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "US" },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 5, "unitCode": "DAY" }
             }
           }
         },
@@ -57,11 +59,8 @@
         "@type": "Product",
         "name": "Mickey Mouse Parfum",
         "image": "https://m.media-amazon.com/images/I/61l4NdSsTqL._AC_SL1000_.jpg",
-        "description": "A sophisticated citrus-gourmand fragrance with notes of bergamot, mandarin, and cocoa.",
-        "brand": {
-          "@type": "Brand",
-          "name": "House of Sillage"
-        },
+        "description": "A sophisticated citrus-gourmand fragrance with notes of bergamot and cocoa.",
+        "brand": { "@type": "Brand", "name": "House of Sillage" },
         "sku": "HOS-DIS-MICKEY",
         "offers": {
           "@type": "Offer",
@@ -74,14 +73,19 @@
           "hasMerchantReturnPolicy": {
             "@type": "MerchantReturnPolicy",
             "applicableCountry": "US",
-            "returnPolicyCategory": "https://schema.org/UnspecifiedReturnPolicy"
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 30,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
           },
           "shippingDetails": {
             "@type": "OfferShippingDetails",
-            "shippingRate": {
-              "@type": "MonetaryAmount",
-              "value": "0.00",
-              "currency": "USD"
+            "shippingRate": { "@type": "MonetaryAmount", "value": "0.00", "currency": "USD" },
+            "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "US" },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 5, "unitCode": "DAY" }
             }
           }
         },
