@@ -5,22 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V4YSPS2YSD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-V4YSPS2YSD');
+    </script>
     <!-- SEO META TAGS -->
     <title>House of Sillage Whispers of Truth Perfume: A Luxury Scent Journey to Authenticity</title>
     <meta name="description" content="Experience House of Sillage Whispers of Truth, a luxury perfume that ignites your destiny. Explore its vibrant citrus, delicate floral, and warm base notes.">
-    <link rel="canonical" href="https://www.thesillageguide.online/house-of-sillage-whispers-of-truth" />
-    
+    <link rel="canonical" href="https://www.thesillageguide.online/house-of-sillage-whispers-of-truth/" />
+
     <link rel="icon" type="image/png" href="/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    
+
     <style>
         :root { --gold: #c5a059; --dark: #1a1a1a; --off-white: #fdfdfd; }
         body { font-family: 'Montserrat', sans-serif; line-height: 1.8; color: #444; background-color: var(--off-white); overflow-x: hidden; }
         h1, h2, h3, .serif { font-family: 'Playfair Display', serif; color: var(--dark); }
         .nav-logo { height: 100px; width: auto; transition: 0.3s; }
-        
+
         /* Search Bar */
         .search-wrapper { position: relative; border-bottom: 1px solid #eee; padding: 2px 0; transition: 0.3s; }
         .search-wrapper:focus-within { border-color: var(--gold); }
@@ -41,7 +47,7 @@
 
         .accent-box { border-left: 4px solid var(--gold); padding: 30px 40px; background: white; margin: 50px 0; font-style: italic; box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
 
-        /* Mixed Slider */
+        /* Boutique Slider */
         .boutiqueSwiper { width: 100%; padding: 50px 0; }
         .boutique-slide { text-align: center; background: #fff; padding: 30px; border: 1px solid #eee; transition: 0.3s; }
         .boutique-slide img { height: 180px; object-fit: contain; margin: 0 auto 20px; }
@@ -52,27 +58,28 @@
     <!-- HEADER -->
     <header class="bg-white border-b border-gray-100 sticky top-0 z-[100]">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-24">
-            <div class="py-2"><a href="/"><img src="/logo.png" alt="The Sillage Guide" class="nav-logo"></a></div>
+            <div class="py-2">
+                <a href="/"><img src="/logo.png" alt="The Sillage Guide" class="nav-logo"></a>
+            </div>
             <nav class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.2em] font-bold">
-                <a href="/" class="hover:text-gold transition">Boutique</a>
-                <a href="/disney" class="hover:text-gold transition">Disney</a>
-                <a href="/mens" class="hover:text-gold transition">Men's</a>
-                <a href="/blog" class="text-gold">Blog</a>
-                <a href="/contact" class="hover:text-gold transition">Contact</a>
+                <a href="/" class="hover:text-yellow-600 transition">Boutique</a>
+                <a href="/disney" class="hover:text-yellow-600 transition">Disney</a>
+                <a href="/mens" class="hover:text-yellow-600 transition">Men's</a>
+                <a href="/blog" style="color: var(--gold);">Blog</a>
+                <a href="/contact" class="hover:text-yellow-600 transition">Contact</a>
             </nav>
             <div class="flex items-center space-x-6">
-                <div class="search-wrapper hidden lg:flex items-center">
+                <div class="search-wrapper hidden lg:flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-gray-400"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                     <input type="text" id="productSearch" placeholder="Search..." onkeyup="filterContent()">
                 </div>
-                <a href="https://amzn.to/4egrVbL" target="_blank" class="bg-black text-white px-6 py-3 text-[10px] uppercase font-bold hover:bg-gold transition">Shop Now</a>
+                <a href="https://amzn.to/4egrVbL" target="_blank" rel="noopener" class="bg-black text-white px-6 py-3 text-[10px] uppercase font-bold hover:bg-yellow-600 transition">Shop Now</a>
             </div>
         </div>
     </header>
 
-    <!-- ARTICLE HERO (BUTTON BOTTOM LEFT) -->
+    <!-- ARTICLE HERO -->
     <section class="relative h-[85vh] flex items-end justify-start overflow-hidden">
-        <!-- LINK YOUR NEW CUSTOM IMAGE HERE -->
         <img src="/truth-full-hero.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Whispers of Truth Full Review">
         <div class="absolute inset-0 bg-black/10"></div>
         <div class="relative z-20 pb-24 pl-20">
@@ -83,7 +90,7 @@
     <!-- FULL ARTICLE CONTENT -->
     <article id="article" class="max-w-4xl mx-auto py-24 px-6">
         <header class="text-center mb-20">
-            <span class="text-gold text-[11px] font-bold uppercase tracking-[0.5em] block mb-4">Haute Parfumerie Feature</span>
+            <span class="text-[11px] font-bold uppercase tracking-[0.5em] block mb-4" style="color: var(--gold);">Haute Parfumerie Feature</span>
             <h1 class="text-4xl md:text-6xl serif italic mb-8 leading-tight">House of Sillage Whispers of Truth Perfume: A Luxury Scent Journey to Authenticity</h1>
             <p class="text-gray-500 font-light italic">Igniting your destiny through the artistry of scent and Swarovski brilliance.</p>
         </header>
@@ -94,18 +101,18 @@
 
             <p>Imagine a scent that captures the very essence of a new beginning, the courage to explore untraveled paths, and the quiet strength found within. That's the promise of House of Sillage Whispers of Truth. It's designed for dreamers and seekers, for individuals who crave more than fleeting moments and superficial appearances. It's a testament to the idea that every destiny starts with a spark of promise, and this <a href="/disney" style="font-weight: bold; text-decoration: underline; color: #c5a059;">fragrance</a> aims to ignite that spark within you. Join us as we explore what makes this exquisite scent a truly rare piece of haute artistry and a worthy addition to any discerning collection.</p>
 
-            <a href="https://amzn.to/4tAGH1N" target="_blank" class="block my-16 text-center group">
+            <a href="https://amzn.to/4tAGH1N" target="_blank" rel="noopener" class="block my-16 text-center group">
                 <img src="https://m.media-amazon.com/images/I/61Iz40fik4L._AC_SL1000_.jpg" class="w-full h-[500px] object-contain mb-6 mx-auto transition-transform duration-700 group-hover:scale-105" alt="Whispers of Truth Bottle">
-                <span class="text-[10px] uppercase tracking-[0.3em] font-bold border-b border-black pb-2 group-hover:text-gold group-hover:border-gold transition">Acquire This Masterpiece on Amazon</span>
+                <span class="text-[10px] uppercase tracking-[0.3em] font-bold border-b border-black pb-2 group-hover:border-yellow-600 transition" style="transition: color 0.3s;">Acquire This Masterpiece on Amazon</span>
             </a>
 
-            <h2>Features & Benefits</h2>
+            <h2>Features &amp; Benefits</h2>
             <p>The House of Sillage Whispers of Truth stands out not just for its captivating aroma but also for the profound philosophy embedded in its creation and its breathtaking presentation. Every detail is meticulously crafted to offer an experience of ultra-luxury and personal significance.</p>
 
             <h3>The Scent Story: A Journey of Destiny and Authenticity</h3>
             <p>At the heart of House of Sillage Whispers of Truth lies a beautifully orchestrated olfactive journey, mirroring the path of self-discovery and destiny. Celebrated perfumers hand-select superior oils to create a fragrance that is both timeless and unique, designed to resonate deeply with the wearer.</p>
 
-            <p><strong>The Awakening Spark (Top Notes):</strong> Every destiny begins with a spark—bright, brave, and full of promise. The initial spray delivers a zesty burst of grapefruit, bergamot, and orange. This vibrant combination awakens the soul like the first light of fate, igniting the senses with energy and a sense of boundless possibility. It’s a fresh, uplifting start that prepares you for the journey ahead.</p>
+            <p><strong>The Awakening Spark (Top Notes):</strong> Every destiny begins with a spark—bright, brave, and full of promise. The initial spray delivers a zesty burst of grapefruit, bergamot, and orange. This vibrant combination awakens the soul like the first light of fate, igniting the senses with energy and a sense of boundless possibility. It's a fresh, uplifting start that prepares you for the journey ahead.</p>
 
             <p><strong>The Bloom of Grace (Middle Notes):</strong> As your personal journey unfolds, the fragrance transitions to its heart, where rose and jasmine bloom. These delicate floral notes symbolize grace and beauty, gently guiding the heart toward authenticity and truth. They represent the beautiful experiences and insights gained along the way, adding a layer of sophistication and heartfelt elegance to the scent.</p>
 
@@ -116,16 +123,16 @@
             </div>
 
             <h2>Unmatched Craftsmanship: The Iconic Cupcake Bottle</h2>
-            <p>The presentation of House of Sillage Whispers of Truth is as extraordinary as the scent itself. It is presented in the iconic House of Sillage cupcake bottle, a true masterpiece of design and artistry. This isn't just a container; it's an objet d’art that transcends perfume, embodying exclusivity, beauty, and ultra-luxury.</p>
+            <p>The presentation of House of Sillage Whispers of Truth is as extraordinary as the scent itself. It is presented in the iconic House of Sillage cupcake bottle, a true masterpiece of design and artistry. This isn't just a container; it's an objet d'art that transcends perfume, embodying exclusivity, beauty, and ultra-luxury.</p>
 
             <p><strong>Exquisite Embellishment:</strong> The gold-plated cap is adorned with an intricate floral motif, lavishly embellished with 896 multicolored Swarovski crystals. Each crystal is meticulously hand-set over the course of more than 18 hours of dedicated craftsmanship. The result is an extraordinary display of brilliance that catches the light and the eye, making it a stunning centerpiece for any vanity.</p>
 
             <p><strong>Flawless Finish:</strong> The snow-white bottle itself undergoes multiple stages of hand polishing to achieve a flawless, pristine finish. Every element reflects exceptional craftsmanship and enduring beauty, making this luxury fragrance not only an exquisite scent but also a rare piece of haute artistry.</p>
 
-            <h2>Pros & Cons</h2>
+            <h2>Pros &amp; Cons</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 my-16">
                 <div class="bg-zinc-50 p-10 border border-gray-100">
-                    <h4 class="font-bold uppercase text-[11px] mb-6 tracking-widest text-dark border-b pb-2">The Pros</h4>
+                    <h4 class="font-bold uppercase text-[11px] mb-6 tracking-widest border-b pb-2" style="color: var(--dark);">The Pros</h4>
                     <ul class="text-sm space-y-4 font-light italic">
                         <li>• Unique and evocative scent profile that transitions from citrus to caramel.</li>
                         <li>• Exceptional luxury presentation with 896 hand-set Swarovski crystals.</li>
@@ -135,7 +142,7 @@
                     </ul>
                 </div>
                 <div class="bg-zinc-50 p-10 border border-gray-100">
-                    <h4 class="font-bold uppercase text-[11px] mb-6 tracking-widest text-dark border-b pb-2">Considerations</h4>
+                    <h4 class="font-bold uppercase text-[11px] mb-6 tracking-widest border-b pb-2" style="color: var(--dark);">Considerations</h4>
                     <ul class="text-sm space-y-4 font-light italic">
                         <li>• Premium price point reflecting the status of high-end haute parfumerie.</li>
                         <li>• Non-returnable policy due to hazardous materials transport regulations.</li>
@@ -163,96 +170,91 @@
             <div class="text-center py-24 bg-zinc-900 text-white rounded-sm">
                 <h2 class="text-4xl serif italic mb-8 text-white">Final Verdict</h2>
                 <p class="max-w-2xl mx-auto text-sm px-10 leading-loose opacity-80 mb-12">The House of Sillage Whispers of Truth is far more than just a fragrance; it's an experience, a statement, and a profound personal journey captured in a bottle. For those who seek a perfume that truly resonates with their inner spirit, urging them towards authenticity and embracing their destiny, this fragrance is an unequivocally magnificent choice. Embrace the whispers within and let this extraordinary scent guide your way.</p>
-                <a href="https://amzn.to/4tAGH1N" target="_blank" class="btn-grand-luxury">Acquire on Amazon</a>
+                <a href="https://amzn.to/4tAGH1N" target="_blank" rel="noopener" class="btn-grand-luxury">Acquire on Amazon</a>
             </div>
         </div>
     </article>
 
-     <!-- CUSDIS COMMENT SECTION (PLACED BEFORE DISCLOSURE) -->
-        <section class="max-w-4xl mx-auto py-24 px-6 border-t border-gray-100 mt-20">
-            <div class="text-center mb-12">
-                <span class="text-gold text-[10px] font-bold uppercase tracking-[0.4em] block mb-2">Community</span>
-                <h3 class="serif italic text-3xl">Collector Reviews & Inquiries</h3>
-            </div>
-            
-            <div id="cusdis_thread"
-              data-host="https://cusdis.com"
-              data-app-id="c4e30ff0-b60a-476d-b21a-eb7fead90b08"
-              data-page-id="house-of-sillage-whispers-of-truth"
-              data-page-url="https://www.thesillageguide.online/house-of-sillage-whispers-of-truth/"
-              data-page-title="House of Sillage Whispers of Truth">
-            </div>
-            <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
-        </section>
-
-        <!-- AFFILIATE DISCLOSURE -->
-        <div class="mt-10 p-10 bg-zinc-50 rounded-lg text-center">
-            <p class="text-[11px] text-gray-400 uppercase tracking-widest leading-relaxed">
-                <strong>Affiliate Disclosure:</strong> <br>
-                The Sillage Guide is an independent review platform. As an Amazon Associate, we earn a commission from qualifying purchases made through the links in this article. These earnings allow us to maintain our high standards of editorial research and provide detailed **House of Sillage perfume reviews** for collectors worldwide. All trademarks are the property of House of Sillage.
-            </p>
+    <!-- CUSDIS COMMENT SECTION -->
+    <section class="max-w-4xl mx-auto py-24 px-6 border-t border-gray-100 mt-20">
+        <div class="text-center mb-12">
+            <span class="text-[10px] font-bold uppercase tracking-[0.4em] block mb-2" style="color: var(--gold);">Community</span>
+            <h3 class="serif italic text-3xl">Collector Reviews &amp; Inquiries</h3>
         </div>
-    </article>
+        <div id="cusdis_thread"
+            data-host="https://cusdis.com"
+            data-app-id="c4e30ff0-b60a-476d-b21a-eb7fead90b08"
+            data-page-id="house-of-sillage-whispers-of-truth"
+            data-page-url="https://www.thesillageguide.online/house-of-sillage-whispers-of-truth/"
+            data-page-title="House of Sillage Whispers of Truth">
+        </div>
+        <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+    </section>
 
-     <!-- BOUTIQUE SLIDER -->
-    <section class="py-24 bg-zinc-50 border-t">
+    <!-- AFFILIATE DISCLOSURE -->
+    <div class="max-w-4xl mx-auto mt-10 p-10 bg-zinc-50 rounded-lg text-center">
+        <p class="text-[11px] text-gray-400 uppercase tracking-widest leading-relaxed">
+            <strong>Affiliate Disclosure:</strong><br>
+            The Sillage Guide is an independent review platform. As an Amazon Associate, we earn a commission from qualifying purchases made through the links in this article. These earnings allow us to maintain our high standards of editorial research and provide detailed House of Sillage perfume reviews for collectors worldwide. All trademarks are the property of House of Sillage.
+        </p>
+    </div>
+
+    <!-- BOUTIQUE SLIDER -->
+    <section class="py-24 bg-zinc-50 border-t mt-20">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <span class="text-gold text-[10px] font-bold uppercase tracking-[0.4em] block mb-4">Signature Pieces</span>
+            <span class="text-[10px] font-bold uppercase tracking-[0.4em] block mb-4" style="color: var(--gold);">Signature Pieces</span>
             <h2 class="text-3xl serif italic mb-12">The Collector's Gallery</h2>
-            
+
             <div class="swiper boutiqueSwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61ECqTv30WL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Abundance</h4></div>
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61Iz40fik4L._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Truth</h4></div>
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61CgSjNBAhL._AC_SX679_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Bijoux</h4></div>
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61l0zhc6QpL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Passion</h4></div>
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/610IISRi+AL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Pink Panther</h4></div>
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/618RFeJRMRL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Wonder Woman</h4></div>
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/618oAj451FL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Slytherin</h4></div>
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61y3uAi6WXL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Gryffindor</h4></div>
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/619uKzBkyfL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Hufflepuff</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61ECqTv30WL._AC_SL1000_.jpg" alt="Abundance"><h4 class="text-[9px] font-bold uppercase mt-4">Abundance</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61Iz40fik4L._AC_SL1000_.jpg" alt="Truth"><h4 class="text-[9px] font-bold uppercase mt-4">Truth</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61CgSjNBAhL._AC_SX679_.jpg" alt="Bijoux"><h4 class="text-[9px] font-bold uppercase mt-4">Bijoux</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61l0zhc6QpL._AC_SL1000_.jpg" alt="Passion"><h4 class="text-[9px] font-bold uppercase mt-4">Passion</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/610IISRi+AL._AC_SL1000_.jpg" alt="Pink Panther"><h4 class="text-[9px] font-bold uppercase mt-4">Pink Panther</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/618RFeJRMRL._AC_SL1000_.jpg" alt="Wonder Woman"><h4 class="text-[9px] font-bold uppercase mt-4">Wonder Woman</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/618oAj451FL._SL1000_.jpg" alt="Slytherin"><h4 class="text-[9px] font-bold uppercase mt-4">Slytherin</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61y3uAi6WXL._SL1000_.jpg" alt="Gryffindor"><h4 class="text-[9px] font-bold uppercase mt-4">Gryffindor</h4></div>
+                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/619uKzBkyfL._SL1000_.jpg" alt="Hufflepuff"><h4 class="text-[9px] font-bold uppercase mt-4">Hufflepuff</h4></div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-            <a href="/" class="mt-12 inline-block border-b border-black pb-1 text-[9px] uppercase font-bold tracking-[0.2em] hover:text-gold transition">Back to Main Boutique</a>
+            <a href="/" class="mt-12 inline-block border-b border-black pb-1 text-[9px] uppercase font-bold tracking-[0.2em] hover:text-yellow-600 transition">Back to Main Boutique</a>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="bg-white border-t border-gray-100 py-16 text-center opacity-60">
-        <img src="/logo.png" alt="Logo" class="h-12 mx-auto mb-4 grayscale">
-        <p class="text-[9px] uppercase tracking-widest">© 2024 thesillageguide.online</p>
+        <img src="/logo.png" alt="The Sillage Guide Logo" class="h-12 mx-auto mb-4 grayscale">
+        <p class="text-[9px] uppercase tracking-widest">&copy; 2024 thesillageguide.online</p>
     </footer>
 
     <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        new Swiper(".boutiqueSwiper", { slidesPerView: 1, spaceBetween: 20, loop: true, autoplay: { delay: 4000 }, pagination: { el: ".swiper-pagination", clickable: true }, breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 4 } } });
-        
-        function filterReviews() {
+        new Swiper(".boutiqueSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: { el: ".swiper-pagination", clickable: true },
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 4 }
+            }
+        });
+
+        function filterContent() {
             let input = document.getElementById('productSearch').value.toLowerCase();
             let cards = document.getElementsByClassName('review-card');
             for (let i = 0; i < cards.length; i++) {
-                let title = cards[i].querySelector('.product-title').innerText.toLowerCase();
-                cards[i].style.display = title.includes(input) ? "block" : "none";
+                let titleEl = cards[i].querySelector('.product-title');
+                if (titleEl) {
+                    cards[i].style.display = titleEl.innerText.toLowerCase().includes(input) ? "block" : "none";
+                }
             }
         }
-    </footer>
-
-    <!-- SCRIPTS (Required for Slider Functionality) -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        new Swiper(".boutiqueSwiper", { 
-            slidesPerView: 1, 
-            spaceBetween: 20, 
-            loop: true, 
-            autoplay: { delay: 4000, disableOnInteraction: false },
-            pagination: { el: ".swiper-pagination", clickable: true }, 
-            breakpoints: { 
-                640: { slidesPerView: 2 }, 
-                1024: { slidesPerView: 4 } 
-            } 
-        });
     </script>
+
 </body>
 </html>
