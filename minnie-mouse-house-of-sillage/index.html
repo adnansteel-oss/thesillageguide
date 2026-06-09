@@ -5,29 +5,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V4YSPS2YSD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-V4YSPS2YSD');
+    </script>
     <!-- SEO META TAGS -->
     <title>Minnie Mouse House of Sillage: The Ultimate Collector's Review</title>
-    <meta name="description" content="Explore the enchanting Minnie Mouse House of Sillage collection. Discover the marshmallow and raspberry scent notes, the Swarovski craftsmanship, and why this Disney collaboration is the pinnacle of luxury perfume.">
+    <meta name="description" content="Explore the enchanting Minnie Mouse House of Sillage collection. Discover the marshmallow, raspberry, and salted caramel scent notes, the Swarovski craftsmanship, and why this Disney collaboration is the pinnacle of luxury perfume.">
     <link rel="canonical" href="https://www.thesillageguide.online/minnie-mouse-house-of-sillage" />
-    
+
     <link rel="icon" type="image/png" href="/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
-    
-    <!-- SWIPER CSS (Required for Slider) -->
+
+    <!-- SWIPER CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    
+
     <style>
-        :root { --gold: #c5a059; --dark: #1a1a1a; --off-white: #fdfdfd; --disney-red: #da291c; }
-        body { font-family: 'Montserrat', sans-serif; line-height: 1.8; color: #444; background-color: #fff; overflow-x: hidden; }
+        :root {
+            --gold: #c5a059;
+            --dark: #1a1a1a;
+            --off-white: #fdfdfd;
+            --disney-red: #da291c;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
+            color: #444;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
         h1, h2, h3, .serif { font-family: 'Playfair Display', serif; color: var(--dark); }
         .nav-logo { height: 100px; width: auto; transition: 0.3s; }
-        .content-area p { margin-bottom: 30px; font-size: 17px; font-weight: 300; text-align: justify; }
-        .content-area h2 { font-size: 32px; margin-top: 50px; margin-bottom: 20px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }
-        .accent-box { border-left: 4px solid var(--disney-red); padding: 20px 40px; background: #fffcfc; margin: 40px 0; font-style: italic; }
+        .text-gold { color: var(--gold); }
+        .bg-gold { background-color: var(--gold); }
+        .hover\:bg-gold:hover { background-color: var(--gold); }
+        .hover\:text-gold:hover { color: var(--gold); }
 
-        /* Slider Styles */
-        .boutique-slide { text-align: center; background: #fff; padding: 20px; border: 1px solid #eee; transition: 0.3s; display: flex; flex-direction: column; height: auto; }
+        /* Article Content */
+        .content-area p {
+            margin-bottom: 30px;
+            font-size: 17px;
+            font-weight: 300;
+            text-align: justify;
+        }
+        .content-area h2 {
+            font-size: 32px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        .content-area h3 {
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 12px;
+        }
+        .content-area ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+        .content-area ul li {
+            font-size: 16px;
+            font-weight: 300;
+            padding: 8px 0 8px 20px;
+            border-bottom: 1px solid #f5f5f5;
+            position: relative;
+        }
+        .content-area ul li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--disney-red);
+        }
+        .content-area ul li:last-child { border-bottom: none; }
+
+        .accent-box {
+            border-left: 4px solid var(--disney-red);
+            padding: 20px 40px;
+            background: #fffcfc;
+            margin: 40px 0;
+            font-style: italic;
+        }
+        .key-takeaway {
+            background: #fafafa;
+            border: 1px solid #f0f0f0;
+            border-left: 3px solid var(--gold);
+            padding: 16px 24px;
+            margin: 20px 0 30px;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+        }
+        .key-takeaway strong { color: var(--gold); }
+
+        /* Notes Table */
+        .notes-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 15px;
+        }
+        .notes-table th {
+            background-color: var(--dark);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 14px 20px;
+            text-align: left;
+        }
+        .notes-table td {
+            padding: 14px 20px;
+            border-bottom: 1px solid #f0f0f0;
+            font-weight: 300;
+        }
+        .notes-table tr:last-child td { border-bottom: none; }
+        .notes-table tr:nth-child(even) td { background: #fafafa; }
+        .note-label {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--disney-red);
+        }
+
+        /* FAQ */
+        .faq-item { border-bottom: 1px solid #f0f0f0; padding: 20px 0; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 8px; color: var(--dark); }
+        .faq-a { font-size: 15px; font-weight: 300; color: #555; line-height: 1.8; margin: 0; }
+
+        /* Boutique Slider */
+        .boutique-slide {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #eee;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
         .boutique-slide img { height: 150px; object-fit: contain; margin: 0 auto 15px; }
     </style>
 </head>
@@ -36,7 +159,9 @@
     <!-- NAVIGATION HEADER -->
     <header class="bg-white border-b border-gray-100 sticky top-0 z-[100]">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-24">
-            <div class="py-2"><a href="/"><img src="/logo.png" alt="Logo" class="nav-logo"></a></div>
+            <div class="py-2">
+                <a href="/"><img src="/logo.png" alt="The Sillage Guide Logo" class="nav-logo"></a>
+            </div>
             <nav class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.2em] font-bold">
                 <a href="/" class="hover:text-gold transition">Boutique</a>
                 <a href="/disney" class="hover:text-gold transition">Disney</a>
@@ -44,61 +169,212 @@
                 <a href="/blog" class="text-gold">Blog</a>
                 <a href="/contact" class="hover:text-gold transition">Contact</a>
             </nav>
-            <a href="https://amzn.to/4egrVbL" target="_blank" class="bg-black text-white px-6 py-3 text-[10px] uppercase tracking-widest font-bold hover:bg-gold transition">Shop Now</a>
+            <a href="https://amzn.to/4egrVbL" target="_blank" rel="noopener noreferrer"
+               class="bg-black text-white px-6 py-3 text-[10px] uppercase tracking-widest font-bold hover:bg-gold transition">
+               Shop Now
+            </a>
         </div>
     </header>
 
-    <!-- ARTICLE CONTENT -->
+    <!-- ARTICLE -->
     <article class="max-w-4xl mx-auto py-20 px-6">
+
         <header class="text-center mb-16">
             <span class="text-gold text-[10px] font-bold uppercase tracking-[0.5em] block mb-4">Haute Parfumerie Review</span>
             <h1 class="text-4xl md:text-6xl serif italic mb-8 leading-tight uppercase">Minnie Mouse House of Sillage</h1>
             <div class="flex justify-center items-center space-x-4 opacity-50 text-[10px] uppercase tracking-widest">
                 <span>May 03, 2024</span>
-                <span>•</span>
+                <span>&bull;</span>
                 <span>The Sillage Journal Editorial</span>
             </div>
         </header>
 
-        <!-- YOUR CUSTOM CANVA IMAGE -->
-        <img src="/minnie-blog-hero.jpg" class="w-full h-auto mb-16 shadow-2xl rounded-sm" alt="Minnie Mouse House of Sillage Luxury Collection">
+        <!-- HERO IMAGE -->
+        <img src="/minnie-blog-hero.jpg"
+             class="w-full h-auto mb-16 shadow-2xl rounded-sm"
+             alt="Minnie Mouse House of Sillage Luxury Perfume Collection">
 
         <div class="content-area">
-            <p>In the landscape of niche perfumery, few names evoke as much awe as House of Sillage. However, when the brand announced a collaboration with Disney, the fragrance world stood still. The <strong>Minnie Mouse House of Sillage</strong> collection is not just a tribute to an icon; it is an masterful blend of nostalgia and high-end luxury. In this review, we dive deep into why this specific scent has become a "Holy Grail" for collectors across the globe.</p>
 
-            <h2>The Fragrance Composition: A Gourmand Dream</h2>
-            <p>The olfactory identity of <strong>Minnie Mouse House of Sillage</strong> is defined by its playful yet sophisticated gourmand profile. While many "character-themed" fragrances lean toward the synthetic or the overly sweet, Sillage has utilized rare, top-tier oils to create a scent that evolves beautifully on the skin.</p>
-            
-            <p>The initial spray offers a radiant overture of <strong>raspberry and bergamot</strong>, providing a sparkling freshness. This quickly gives way to a heart of <strong>fluffy marshmallow and creamy coconut</strong>. It is this specific combination that creates the "Disney Magic"—a scent that feels like a childhood memory but wears like a fine Parisian silk. The dry down is where the true luxury resides, as <strong>velvety vanilla</strong> and <strong>warm cedarwood</strong> ground the fragrance, providing a sillage that lasts well over 8 hours.</p>
+            <p>Disney charm meets serious perfumery in one beautiful bottle. The Minnie Mouse House of Sillage perfume blends playful sweetness with the craftsmanship of a true haute parfumerie house. It's a scent that feels like a treat and a keepsake all at once.</p>
 
-            <div class="accent-box text-xl">
-                "The Minnie Mouse collection is a testament to the belief that luxury should be fun, and magic should be sophisticated."
+            <p>This fragrance is more than a pretty spray. It's a collector's piece, a gift to remember, and a daily dose of joy. If you love Disney, adore luxury gourmand perfume, or simply want a bottle worth displaying, this one belongs on your dresser.</p>
+
+            <p>Below, we'll walk you through the scent, the design, and what to know before you add it to your collection.</p>
+
+            <!-- PRODUCT OVERVIEW -->
+            <h2>Product Overview</h2>
+            <p>The Minnie Mouse perfume from House of Sillage is a Floral Fruity Gourmand composition. In plain terms, that means it's sweet, fruity, and dessert-like, with a soft floral touch woven through.</p>
+
+            <p>Here's the quick snapshot:</p>
+            <ul>
+                <li><strong>Category:</strong> Gourmand haute parfumerie creation</li>
+                <li><strong>Collaboration:</strong> House of Sillage &times; Disney, officially licensed</li>
+                <li><strong>Best for:</strong> Disney fans, fragrance lovers, gift shoppers, and serious collectors</li>
+            </ul>
+
+            <p>It captures Minnie's sweet, fun-loving spirit while staying grounded in real craftsmanship, creating a whimsical mood with serious execution.</p>
+
+            <div class="key-takeaway"><strong>Key takeaway:</strong> A playful scent backed by genuine luxury detail.</div>
+
+            <!-- FRAGRANCE NOTES -->
+            <h2>Fragrance Notes Explained</h2>
+            <p>Every great perfume tells a story as it wears. Here's how this one unfolds from your first spray to its final hours on the skin.</p>
+
+            <!-- NOTES TABLE -->
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Stage</th>
+                        <th>Notes</th>
+                        <th>Character</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="note-label">Top Notes</span></td>
+                        <td><strong>Marshmallow &amp; Whipped Cream</strong></td>
+                        <td>A fluffy, sugary cloud — a bright first impression that makes you smile right away.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="note-label">Heart Notes</span></td>
+                        <td><strong>Raspberry, Salted Caramel &amp; Coconut</strong></td>
+                        <td>Jammy and warm. The raspberry adds a fruity pop, the caramel brings warmth, and the coconut softens it into something cozy.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="note-label">Base Notes</span></td>
+                        <td><strong>Bourbon Vanilla, Musk &amp; Cedarwood</strong></td>
+                        <td>Smooth and quietly addictive. The cedar keeps it from feeling too sweet, giving the blend a polished edge.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Performance</h3>
+            <p>You don't have to worry about overwhelming a room. The sillage stays soft and close, while the longevity still carries you through the day.</p>
+
+            <div class="key-takeaway"><strong>Key takeaway:</strong> Sweet, warm, and balanced for the joyful wearer.</div>
+
+            <!-- KEY FEATURES -->
+            <h2>Key Features and Benefits</h2>
+            <p>This perfume offers more than a lovely scent. Each detail adds real value.</p>
+            <ul>
+                <li><strong>Gourmand haute parfumerie composition</strong> &ndash; A dessert-inspired scent with expert balance, so it feels fun yet refined.</li>
+                <li><strong>Iconic Minnie bow cap in crystal</strong> &ndash; A showpiece topper that doubles as art on your shelf.</li>
+                <li><strong>Hand-painted French glass flacon</strong> &ndash; A weighted, ombré bottle worth keeping long after the last spray.</li>
+                <li><strong>Officially licensed limited-edition status</strong> &ndash; Real exclusivity that boosts both gift appeal and collector value.</li>
+            </ul>
+            <p>In short, you get a fragrance that smells wonderful, looks stunning on display, and stands out as a thoughtful, rare gift.</p>
+
+            <!-- DESIGN & CRAFTSMANSHIP -->
+            <h2>Design and Craftsmanship</h2>
+            <p>This is where the bottle truly becomes a collector's perfume bottle, and the artistry behind it sets it apart from a typical fragrance.</p>
+
+            <h3>The Iconic Minnie Bow Cap</h3>
+            <p>The cap is sculpted into Minnie's unmistakable bow silhouette. But it's the detail that wows:</p>
+            <ul>
+                <li>Over 100 diamond-cut Swarovski crystals</li>
+                <li>Each crystal is hand-placed by master jewelers</li>
+                <li>A finish that feels playful and couture at the same time</li>
+            </ul>
+            <p>The bow is the signature touch, and it sparkles like real jewelry.</p>
+
+            <h3>The Hand-Painted French Glass Flacon</h3>
+            <p>The bottle is made from fine French glass and hand-painted in a mesmerizing ombré by skilled haute joaillerie artisans.</p>
+            <ul>
+                <li>Substantial, weighted feel in the hand</li>
+                <li>A display-worthy keepsake</li>
+                <li>Crafted to be admired for years</li>
+            </ul>
+
+            <div class="key-takeaway"><strong>Key takeaway:</strong> Built to be loved long after the fragrance is finished.</div>
+
+            <!-- LIMITED EDITION -->
+            <h2>Disney &times; House of Sillage Limited Edition</h2>
+            <p>This is an officially licensed collaboration between House of Sillage and Disney. It is a creator's tribute to Mickey's everlasting sweetheart, made with both love and skill.</p>
+            <p>What makes it special:</p>
+            <ul>
+                <li>Produced in limited quantity, so it won't be around forever</li>
+                <li>Designed for the serious collector and the discerning gift giver</li>
+                <li>A premium, giftable luxury item with lasting appeal</li>
+            </ul>
+            <p>Limited production is part of the magic. Once it sells out, that's it, which is why fans and collectors move quickly.</p>
+
+            <!-- PROS & CONS -->
+            <h2>Pros and Cons</h2>
+            <p>Every fragrance has its fit, so here's an honest look to help you decide.</p>
+
+            <h3>Pros</h3>
+            <ul>
+                <li>Beautiful gourmand scent that's sweet, warm, and easy to wear</li>
+                <li>Stunning crystal bow cap and hand-painted bottle</li>
+                <li>Officially licensed Disney collectible</li>
+                <li>Generous longevity for all-day wear</li>
+                <li>A standout gift for Disney fans and perfume lovers</li>
+            </ul>
+
+            <h3>Cons</h3>
+            <ul>
+                <li>Limited availability means it may sell out fast</li>
+                <li>Premium price point reflects the luxury craftsmanship</li>
+                <li>The sweet, gourmand profile may not suit everyone's taste</li>
+            </ul>
+
+            <!-- FAQ -->
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <p class="faq-q">What does Minnie Mouse House of Sillage smell like?</p>
+                <p class="faq-a">It's a Floral Fruity Gourmand. You'll notice marshmallow and whipped cream up top, raspberry, salted caramel, and coconut in the heart, and bourbon vanilla, musk, and cedarwood in the base. Sweet, warm, and comforting.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q">Is this fragrance a limited edition?</p>
+                <p class="faq-a">Yes. It's produced in limited quantities as part of the Disney &times; House of Sillage collaboration, so availability won't last long.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q">How long does the scent last?</p>
+                <p class="faq-a">Longevity is generous, carrying you through the day, while the sillage stays soft and close to the skin.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q">Is it an officially licensed Disney product?</p>
+                <p class="faq-a">Yes. It's an officially licensed collaboration between House of Sillage and Disney.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q">Who is this fragrance best suited for?</p>
+                <p class="faq-a">It's ideal for Disney fans, gourmand perfume lovers, collectors, and anyone shopping for a special gift.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q">Can the bottle be kept as a collectible?</p>
+                <p class="faq-a">Absolutely. The crystal bow cap and hand-painted French glass flacon make it a piece you'll want to display long after the fragrance is gone.</p>
             </div>
 
-            <h2>Craftsmanship: The Iconic Swarovski Bow</h2>
-            <p>House of Sillage is famous for their "Cupcake" bottles, but the Minnie Mouse edition takes artistry to a new level. The bottle is made from <strong>custom red-lacquered French glass</strong>, polished by hand to achieve a flawless smoothness. The cap—the most distinctive feature—is hand-plated in yellow gold and features Minnie’s iconic bow.</p>
+            <!-- CLOSING -->
+            <h2>Ready to Make It Yours?</h2>
+            <p>The Minnie Mouse House of Sillage perfume brings together Disney joy and couture craftsmanship in a way few fragrances ever manage. It is a sweet, addictive scent, a dazzling crystal-topped bottle, and a rare collectible all in one.</p>
+            <p>Because it is a limited edition, the smartest move is to act before it disappears. Whether you're treating yourself, surprising a Disney fan, or adding a showpiece to your collection, this is your moment.</p>
+            <p>Secure your bottle today and bring home a little Disney magic that lasts.</p>
 
-            <p>What sets this apart from any other perfume on your vanity are the <strong>896 hand-set Swarovski crystals</strong>. Master artisans spend nearly 20 hours on every single cap, ensuring that each crystal captures and reflects light with diamond-like brilliance. This level of craftsmanship justifies the investment, turning a perfume bottle into a piece of fine jewelry.</p>
+            <p>While the Minnie Mouse collection is a masterpiece of feminine elegance, those looking for a more masculine or bold aesthetic should explore the
+            <a href="/mens" class="text-gold font-bold hover:underline">House of Sillage Men's Suite</a>,
+            featuring bold collaborations like the Batman 85th Anniversary parfum.</p>
 
-            <h2>Cosmetic Elegance: The Bow Lipstick Case</h2>
-            <p>For the woman who desires a complete ritual, the <strong>Minnie Mouse Bow Lipstick Case</strong> is the ultimate accessory. Finished in vibrant red enamel and adorned with over 300 crystals, this refillable case is designed to hold the House of Sillage Diamond Powder lipsticks. Whether you are applying the 'Playful Nude' or the 'Playful Red,' the weighted feel of the gold-plated case adds a sense of opulence to your daily beauty routine.</p>
+        </div><!-- /content-area -->
 
-            <h2>Is the Minnie Mouse House of Sillage Worth It?</h2>
-            <p>If you are a collector of rare items or a lover of high-concept perfumery, the answer is a resounding yes. The <strong>Minnie Mouse House of Sillage</strong> collection offers a unique value proposition: it combines the world's most recognized character with the world's most meticulous perfume craftsmanship. It is an investment in art, memory, and an unforgettable olfactory signature.</p>
-             
-            <p>While the Minnie Mouse collection is a masterpiece of feminine elegance, those looking for a more masculine or industrial aesthetic should explore the 
-            <a href="/mens" class="text-gold font-bold hover:underline">House of Sillage Men's Suite</a>, featuring bold collaborations like the Batman 85th Anniversary parfum.</p>
-        </div>
-
-        <!-- AFFILIATE CTA -->
+        <!-- AFFILIATE CTA BUTTONS (original style) -->
         <div class="mt-20 p-12 bg-zinc-50 text-center rounded-xl border border-gray-100">
             <h3 class="serif italic text-3xl mb-4">Acquire the Magic</h3>
             <p class="text-sm text-gray-500 uppercase tracking-[0.2em] mb-10">Shop the official Minnie Mouse Collection on Amazon</p>
             <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-                <a href="https://amzn.to/42BQ3P0" target="_blank" class="bg-black text-white px-10 py-5 text-[11px] uppercase font-bold tracking-widest hover:bg-gold transition shadow-xl">Shop The Parfum</a>
-                <a href="https://amzn.to/4t9ddae" target="_blank" class="border border-black text-black px-10 py-5 text-[11px] uppercase font-bold tracking-widest hover:bg-black hover:text-white transition shadow-xl">Shop Lipstick Case</a>
+                <a href="https://amzn.to/42BQ3P0" target="_blank" rel="noopener noreferrer"
+                   class="bg-black text-white px-10 py-5 text-[11px] uppercase font-bold tracking-widest hover:bg-gold transition shadow-xl">
+                   Shop The Parfum
+                </a>
+                <a href="https://amzn.to/4t9ddae" target="_blank" rel="noopener noreferrer"
+                   class="border border-black text-black px-10 py-5 text-[11px] uppercase font-bold tracking-widest hover:bg-black hover:text-white transition shadow-xl">
+                   Shop Lipstick Case
+                </a>
             </div>
         </div>
+
     </article>
 
     <!-- BOUTIQUE SLIDER -->
@@ -106,46 +382,74 @@
         <div class="max-w-7xl mx-auto px-6 text-center">
             <span class="text-gold text-[10px] font-bold uppercase tracking-[0.4em] block mb-4">Signature Pieces</span>
             <h2 class="text-3xl serif italic mb-12">The Collector's Gallery</h2>
-            
+
             <div class="swiper boutiqueSwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61ECqTv30WL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Abundance</h4></div>
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61Iz40fik4L._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Truth</h4></div>
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61CgSjNBAhL._AC_SX679_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Bijoux</h4></div>
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61l0zhc6QpL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Passion</h4></div>
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/610IISRi+AL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Pink Panther</h4></div>
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/618RFeJRMRL._AC_SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Wonder Woman</h4></div>
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/618oAj451FL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Slytherin</h4></div>
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/61y3uAi6WXL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Gryffindor</h4></div>
-                    <div class="swiper-slide boutique-slide"><img src="https://m.media-amazon.com/images/I/619uKzBkyfL._SL1000_.jpg"><h4 class="text-[9px] font-bold uppercase mt-4">Hufflepuff</h4></div>
+                    <div class="swiper-slide boutique-slide">
+                        <img src="https://m.media-amazon.com/images/I/61ECqTv30WL._AC_SL1000_.jpg" alt="House of Sillage Abundance">
+                        <h4 class="text-[9px] font-bold uppercase mt-4">Abundance</h4>
+                    </div>
+                    <div class="swiper-slide boutique-slide">
+                        <img src="https://m.media-amazon.com/images/I/61Iz40fik4L._AC_SL1000_.jpg" alt="House of Sillage Truth">
+                        <h4 class="text-[9px] font-bold uppercase mt-4">Truth</h4>
+                    </div>
+                    <div class="swiper-slide boutique-slide">
+                        <img src="https://m.media-amazon.com/images/I/61CgSjNBAhL._AC_SX679_.jpg" alt="House of Sillage Bijoux">
+                        <h4 class="text-[9px] font-bold uppercase mt-4">Bijoux</h4>
+                    </div>
+                    <div class="swiper-slide boutique-slide">
+                        <img src="https://m.media-amazon.com/images/I/61l0zhc6QpL._AC_SL1000_.jpg" alt="House of Sillage Passion">
+                        <h4 class="text-[9px] font-bold uppercase mt-4">Passion</h4>
+                    </div>
+                    <div class="swiper-slide boutique-slide">
+                        <img src="https://m.media-amazon.com/images/I/610IISRi+AL._AC_SL1000_.jpg" alt="House of Sillage Pink Panther">
+                        <h4 class="text-[9px] font-bold uppercase mt-4">Pink Panther</h4>
+                    </div>
+                    <div class="swiper-slide boutique-slide">
+                        <img src="https://m.media-amazon.com/images/I/618RFeJRMRL._AC_SL1000_.jpg" alt="House of Sillage Wonder Woman">
+                        <h4 class="text-[9px] font-bold uppercase mt-4">Wonder Woman</h4>
+                    </div>
+                    <div class="swiper-slide boutique-slide">
+                        <img src="https://m.media-amazon.com/images/I/618oAj451FL._SL1000_.jpg" alt="House of Sillage Slytherin">
+                        <h4 class="text-[9px] font-bold uppercase mt-4">Slytherin</h4>
+                    </div>
+                    <div class="swiper-slide boutique-slide">
+                        <img src="https://m.media-amazon.com/images/I/61y3uAi6WXL._SL1000_.jpg" alt="House of Sillage Gryffindor">
+                        <h4 class="text-[9px] font-bold uppercase mt-4">Gryffindor</h4>
+                    </div>
+                    <div class="swiper-slide boutique-slide">
+                        <img src="https://m.media-amazon.com/images/I/619uKzBkyfL._SL1000_.jpg" alt="House of Sillage Hufflepuff">
+                        <h4 class="text-[9px] font-bold uppercase mt-4">Hufflepuff</h4>
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-            <a href="/" class="mt-12 inline-block border-b border-black pb-1 text-[9px] uppercase font-bold tracking-[0.2em] hover:text-gold transition">Back to Main Boutique</a>
+
+            <a href="/" class="mt-12 inline-block border-b border-black pb-1 text-[9px] uppercase font-bold tracking-[0.2em] hover:text-gold transition">
+                Back to Main Boutique
+            </a>
         </div>
     </section>
 
-    <!-- COMMENT & REVIEW SECTION (PLACEMENT: BEFORE FOOTER) -->
+    <!-- COMMUNITY REVIEWS -->
     <section class="max-w-4xl mx-auto py-24 px-6 border-t border-gray-100">
         <div class="text-center mb-12">
             <span class="text-gold text-[10px] font-bold uppercase tracking-[0.4em] block mb-2">Community</span>
-            <h3 class="serif italic text-3xl">Collector Reviews & Inquiries</h3>
+            <h3 class="serif italic text-3xl">Collector Reviews &amp; Inquiries</h3>
         </div>
-        
-        <!-- Cusdis Widget -->
         <div id="cusdis_thread"
-          data-host="https://cusdis.com"
-          data-app-id="c4e30ff0-b60a-476d-b21a-eb7fead90b08"
-          data-page-id="minnie-mouse-review"
-          data-page-url="https://www.thesillageguide.online/minnie-mouse-house-of-sillage"
-          data-page-title="Minnie Mouse House of Sillage Review">
+             data-host="https://cusdis.com"
+             data-app-id="c4e30ff0-b60a-476d-b21a-eb7fead90b08"
+             data-page-id="minnie-mouse-review"
+             data-page-url="https://www.thesillageguide.online/minnie-mouse-house-of-sillage"
+             data-page-title="Minnie Mouse House of Sillage Review">
         </div>
         <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
     </section>
 
-    <!-- FOOTER WITH AFFILIATE DISCLOSURE -->
+    <!-- FOOTER -->
     <footer class="bg-white border-t border-gray-100 py-16 px-6 text-center">
-        <img src="/logo.png" alt="Logo" class="h-12 mx-auto mb-8 grayscale opacity-30">
+        <a href="/"><img src="/logo.png" alt="The Sillage Guide" class="h-12 mx-auto mb-8 grayscale opacity-30"></a>
         <div class="max-w-3xl mx-auto">
             <p class="text-[10px] text-gray-400 leading-relaxed uppercase tracking-widest">
                 <strong>Affiliate Disclosure:</strong> As an Amazon Associate, The Sillage Guide earns from qualifying purchases made through the links in this article. We provide independent reviews to help you navigate the world of luxury scents. All trademarks are property of their respective owners.
@@ -153,19 +457,19 @@
         </div>
     </footer>
 
-    <!-- SCRIPTS (Required for Slider Functionality) -->
+    <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        new Swiper(".boutiqueSwiper", { 
-            slidesPerView: 1, 
-            spaceBetween: 20, 
-            loop: true, 
+        new Swiper(".boutiqueSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
             autoplay: { delay: 4000, disableOnInteraction: false },
-            pagination: { el: ".swiper-pagination", clickable: true }, 
-            breakpoints: { 
-                640: { slidesPerView: 2 }, 
-                1024: { slidesPerView: 4 } 
-            } 
+            pagination: { el: ".swiper-pagination", clickable: true },
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 4 }
+            }
         });
     </script>
 
