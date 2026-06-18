@@ -1,106 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- ==================== MAIN PAGES ==================== -->
-
-  <url>
-    <loc>https://www.thesillageguide.online/</loc>
-    <lastmod>2024-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://www.thesillageguide.online/disney</loc>
-    <lastmod>2024-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.thesillageguide.online/mens</loc>
-    <lastmod>2024-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.thesillageguide.online/blog</loc>
-    <lastmod>2024-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.thesillageguide.online/contact</loc>
-    <lastmod>2024-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- ==================== BLOG / JOURNAL ARTICLES ==================== -->
-
-  <url>
-    <loc>https://www.thesillageguide.online/minnie-mouse-house-of-sillage</loc>
-    <lastmod>2024-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.thesillageguide.online/house-of-sillage-mickey-mouse</loc>
-    <lastmod>2024-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.thesillageguide.online/house-of-sillage-perfume-reviews</loc>
-    <lastmod>2024-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.thesillageguide.online/house-of-sillage-whispers-of-truth</loc>
-    <lastmod>2024-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.thesillageguide.online/house-of-sillage-batman-85th-anniversary-review</loc>
-    <lastmod>2024-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.thesillageguide.online/benevolence-house-of-sillage-review</loc>
-    <lastmod>2024-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.thesillageguide.online/house-of-silage-reviews</loc>
-    <lastmod>2024-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.thesillageguide.online/how-to-make-perfume-last-longer</loc>
-    <lastmod>2024-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.thesillageguide.online/how-long-does-perfume-last</loc>
-    <lastmod>2024-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
+<!--  ==================== MAIN PAGES ====================  -->
+<url>
+<loc>https://thesillageguide.online/</loc>
+<lastmod>2024-05-01</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://thesillageguide.online/disney/</loc>
+<lastmod>2024-05-01</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://thesillageguide.online/mens/</loc>
+<lastmod>2024-05-01</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://thesillageguide.online/blog/</loc>
+<lastmod>2024-05-01</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://thesillageguide.online/contact/</loc>
+<lastmod>2024-05-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+<!--  ==================== BLOG / JOURNAL ARTICLES ====================  -->
+<url>
+<loc>https://thesillageguide.online/minnie-mouse-house-of-sillage/</loc>
+<lastmod>2024-05-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://thesillageguide.online/house-of-sillage-mickey-mouse/</loc>
+<lastmod>2024-05-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://thesillageguide.online/house-of-sillage-perfume-reviews/</loc>
+<lastmod>2024-05-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://thesillageguide.online/house-of-sillage-whispers-of-truth/</loc>
+<lastmod>2024-05-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://thesillageguide.online/house-of-sillage-batman-85th-anniversary-review/</loc>
+<lastmod>2024-05-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://thesillageguide.online/benevolence-house-of-sillage-review/</loc>
+<lastmod>2024-05-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://thesillageguide.online/house-of-silage-reviews/</loc>
+<lastmod>2024-05-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://thesillageguide.online/how-to-make-perfume-last-longer/</loc>
+<lastmod>2024-05-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://thesillageguide.online/how-long-does-perfume-last/</loc>
+<lastmod>2024-05-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://thesillageguide.online/house-of-sillage-hauts-bijoux/</loc>
+<lastmod>2024-05-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://thesillageguide.online/where-to-buy-house-of-sillage-perfume/</loc>
+<lastmod>2024-05-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 </urlset>
